@@ -341,12 +341,19 @@ html body header {
 }
 
 html body header .header_wrap {
-  max-width: 1060px;
-  width: 100%;
+  max-width: 1500px;
+  width: 95%;
   margin: 0 auto;
   padding: 32px 0 31px;
   /*block*/
   /*nav*/
+}
+
+@media (max-width: 1024px) {
+  html body header .header_wrap {
+    max-width: 1024px;
+    width: 95%;
+  }
 }
 
 html body header .header_wrap .header_block {
@@ -377,6 +384,12 @@ html body header .header_wrap .header_block .header_logo h1 {
   /*logo_sub*/
 }
 
+@media (max-width: 1024px) {
+  html body header .header_wrap .header_block .header_logo h1 {
+    font-size: 30px;
+  }
+}
+
 html body header .header_wrap .header_block .header_logo h1 .header_logo_sub {
   display: block;
   font-size: 15px;
@@ -398,20 +411,40 @@ html body header .header_wrap .header_block .header_info .header_contact {
   text-align: center;
   padding-right: 24.4px;
   border-right: 1px solid #6B7483;
+  font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  html body header .header_wrap .header_block .header_info .header_contact {
+    padding-right: 12px;
+    font-size: 14px;
+  }
 }
 
 html body header .header_wrap .header_block .header_info .header_tel {
   padding-left: 25.6px;
   margin-right: 23px;
+  font-size: 20px;
 }
 
-html body header .header_wrap .header_block .header_info .header_tel p span {
+@media (max-width: 1024px) {
+  html body header .header_wrap .header_block .header_info .header_tel {
+    display: none;
+  }
+}
+
+html body header .header_wrap .header_block .header_info .header_tel .area {
+  font-size: 18px;
+}
+
+html body header .header_wrap .header_block .header_info .header_tel .area span {
   margin-left: 12px;
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
+  font-size: 20px;
 }
 
-html body header .header_wrap .header_block .header_info .header_tel p span img {
+html body header .header_wrap .header_block .header_info .header_tel .area span img {
   width: 13px;
 }
 
@@ -419,6 +452,13 @@ html body header .header_wrap .header_block .header_info .btn {
   width: 218px;
   margin: 0 auto;
   /*a*/
+}
+
+@media (max-width: 1024px) {
+  html body header .header_wrap .header_block .header_info .btn {
+    margin-left: 10px;
+    width: 200px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -472,6 +512,16 @@ html body header .header_wrap .header_nav ul {
       -ms-flex-pack: center;
           justify-content: center;
   /*li*/
+  /*last-child*/
+}
+
+@media (max-width: 1024px) {
+  html body header .header_wrap .header_nav ul {
+    margin: 0 auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 650px;
+  }
 }
 
 html body header .header_wrap .header_nav ul li {
@@ -491,8 +541,12 @@ html body header .header_wrap .header_nav ul li a {
   font-weight: bold;
 }
 
+html body header .header_wrap .header_nav ul li:last-child {
+  border-right: none;
+}
+
 html body .mainvisual {
-  background-image: url(../img/service/mv-mainvisual.png);
+  background-image: url(../img/service/mainvisual3.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: 45vw;
@@ -565,13 +619,14 @@ html body .content_box {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 94px 160px 134px 160px;
+  padding: 125px 160px 134px 160px;
   -webkit-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.16);
   border-radius: 41px;
   /*h2*/
   /*checkbox*/
   /*example*/
+  /*concept*/
   /*curriculum*/
   /*consulting_flow*/
   /*point_wrap*/
@@ -591,7 +646,8 @@ html body .content_box h2 {
   line-height: 76px;
   width: 880px;
   margin: 0 auto;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
+  font-weight: 900;
 }
 
 html body .content_box .check_box {
@@ -619,7 +675,7 @@ html body .content_box .check_box ul li img {
 }
 
 html body .content_box .example {
-  margin-bottom: 109px;
+  margin-bottom: 113px;
   /*block*/
 }
 
@@ -674,6 +730,22 @@ html body .content_box .example_block .example_box .profile_block .check {
   font-size: 15px;
   color: #F79E46;
   margin-bottom: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .content_box .example_block .example_box .profile_block .check:after {
+  content: "";
+  height: 1px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #F79E46;
+  margin-left: 1rem;
 }
 
 html body .content_box .example_block .example_box .profile_block .symptom {
@@ -689,9 +761,37 @@ html body .content_box .example_block .example_box .profile_block .profile_text 
   width: 266px;
   letter-spacing: 0.375px;
   line-height: 1.8;
+  font-weight: 500;
+}
+
+html body .content_box .concept {
+  margin-bottom: 113px;
+  /*title*/
+  /*text*/
+}
+
+html body .content_box .concept .concept_title {
+  font-size: 26px;
+  color: #F79E46;
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+html body .content_box .concept .text {
+  letter-spacing: 0.4px;
+  line-height: 1.875;
+}
+
+html body .content_box .concept #concept_last_text {
+  margin-top: 30px;
+}
+
+html body .content_box .concept .concept-img {
+  margin-bottom: 33px;
 }
 
 html body .content_box .curriculum {
+  /*curriculum_sub_title*/
   /*flow*/
 }
 
@@ -700,6 +800,14 @@ html body .content_box .curriculum .curriculum_text {
   line-height: 1.8;
   letter-spacing: 0.4px;
   margin-bottom: 40px;
+  text-align: center;
+}
+
+html body .content_box .curriculum .curriculum_sub_title {
+  color: #F79E46;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 28px;
 }
 
 html body .content_box .curriculum .flow {
@@ -728,7 +836,6 @@ html body .content_box .curriculum .flow .program {
 
 html body .content_box .curriculum .flow .program .program_item {
   text-align: center;
-  margin: 0 60px;
 }
 
 html body .content_box .curriculum .flow .program .program_item h3 {
@@ -757,16 +864,20 @@ html body .content_box .curriculum .flow .program_second {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 784px;
+  margin: 0 auto;
   /*item*/
 }
 
 html body .content_box .curriculum .flow .program_second .program_item {
   background-color: #FFF9E8;
   text-align: center;
-  margin: 0 60px;
-  padding: 36px 79px;
+  padding: 36px 0px;
   border-radius: 33px;
-  max-width: 334px;
+  width: 334px;
 }
 
 html body .content_box .curriculum .flow .program_second .program_item h3 {
@@ -826,6 +937,10 @@ html body .content_box .consulting_flow_box #consulting_flow_pic {
   margin-bottom: 30px;
 }
 
+html body .content_box .consulting_flow_box .text_on_box {
+  font-size: 17px;
+}
+
 html body .content_box .consulting_flow_box .free_block {
   background-color: #EAEEEF;
   padding: 30px 36px;
@@ -836,9 +951,15 @@ html body .content_box .consulting_flow_box .free_block {
 html body .content_box .consulting_flow_box .free_block .free_title {
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 16px;
+}
+
+html body .content_box .consulting_flow_box .free_block p {
+  font-size: 16px;
 }
 
 html body .content_box .point_wrap {
+  margin-bottom: 109px;
   /*content*/
 }
 
@@ -846,6 +967,9 @@ html body .content_box .point_wrap .point_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   /*point_circle_block*/
 }
 
@@ -857,13 +981,17 @@ html body .content_box .point_wrap .point_content .point_circle_block .point_blo
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /*circle*/
 }
 
 html body .content_box .point_wrap .point_content .point_circle_block .point_block .circle {
   position: relative;
-  width: 148px;
-  height: 148px;
+  width: 153px;
+  height: 153px;
   border-radius: 50%;
   text-align: center;
   color: #ffffff;
@@ -882,15 +1010,20 @@ html body .content_box .point_wrap .point_content .point_circle_block .point_blo
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: center;
+  font-size: 15px;
   /*span*/
 }
 
 html body .content_box .point_wrap .point_content .point_circle_block .point_block .circle p span {
   display: block;
+  font-size: 18px;
 }
 
-html body .content_box .point_wrap .point_content .point_circle_block .point_block p {
+html body .content_box .point_wrap .point_content .point_circle_block .point_block .text {
   width: 371px;
+  margin-left: 18px;
+  letter-spacing: 0.4px;
+  line-height: 1.875;
 }
 
 html body .content_box .point_wrap .point_content .point_circle_block .point_block #orange_circle {
@@ -905,11 +1038,16 @@ html body .content_box .point_wrap .point_content .point_circle_block .point_blo
   background-color: #FBD362;
 }
 
+html body .content_box .point_wrap .point_content .point_img {
+  margin-right: 85px;
+}
+
 html body .content_box .proceed {
   text-align: center;
   margin-top: 39px;
   /*blue_box*/
   /*blue_box*/
+  /*yellow_fill*/
   /*yellow_fill*/
   /*wrap*/
 }
@@ -933,8 +1071,14 @@ html body .content_box .proceed .yellow_box {
   color: #FBD362;
 }
 
-html body .content_box .proceed #yellow__fill {
-  background-color: #FBD362;
+html body .content_box .proceed #gray__fill {
+  background-color: #EAEEEF;
+  color: #FFFFFF;
+  color: #6B7483;
+}
+
+html body .content_box .proceed #orange__fill {
+  background-color: #F79E46;
   color: #FFFFFF;
 }
 
@@ -953,6 +1097,10 @@ html body .content_box .proceed .proceed_wrap {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
   /*proceed_text_block*/
 }
 
@@ -1012,6 +1160,11 @@ html body .content_box .customer_list .profile_content .profile_block .profile {
   /*list*/
 }
 
+html body .content_box .customer_list .profile_content .profile_block .profile img {
+  width: 160px;
+  height: 158px;
+}
+
 html body .content_box .customer_list .profile_content .profile_block .profile .profile_list {
   /*li*/
 }
@@ -1020,6 +1173,8 @@ html body .content_box .customer_list .profile_content .profile_block .profile .
   list-style: none;
   color: #F79E46;
   font-weight: bold;
+  font-size: 17px;
+  line-height: 1.88;
 }
 
 html body .content_box .customer_list .profile_content .profile_block .text {
