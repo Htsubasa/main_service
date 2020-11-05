@@ -65,8 +65,17 @@ $sp-second: 425px;  // スマホ
       height: auto;
       line-height: 30px;
       padding: 21px 0px 24px 0px;
+      background-image: url(../img/common/title_yellow_sp.png);
+    }
+
+    .br_sp{
+      display: none;
+      @include sp{
+        display: block;
+      }
     }
 }
+
 
 html{
 
@@ -224,20 +233,15 @@ body{
       margin-top: 39px;
 
       @include tab{
-        display: none;
-        width: 350px;
-        height: 100%;
-        color: rgb(0, 0, 0);
-        height: 100vh;
-        background-color: #ffffff;
-        text-align: center;
         position: fixed;
+        width: 300px;
         top: 0;
-        right: 0;
-        z-index: 1000;
+        right: -300px;
+        background-color: #ffffff;
+        height: 100%;
+        padding-top: 0px;
+        z-index: 3;
         margin-top: 0px;
-        transform: translateX(0); /* right0まで-250px移動 */
-
       }
 
       ul{
@@ -252,8 +256,18 @@ body{
 
         @include tab{
           display: inline-block;
-          padding-top: 80px;
-          padding-bottom: 80px;
+          padding-top: 120px;
+        }
+
+        #contact-drawer{
+
+          a{
+            @include tab{
+              background-color: #FBD362;
+              border-bottom: none;
+            }
+
+          }
         }
 
         .g-nav{
@@ -284,6 +298,13 @@ body{
             -webkit-transform: skewX(0deg);
             -moz-transform: skewX(0deg);
             transform: skewX(0deg); 
+            font-size: 16px;
+            padding: 14px 20px;
+            border-bottom: 1px solid #ccc;
+          }
+
+          @include sp{
+            font-size: 14px;
           }
 
           }
@@ -297,12 +318,8 @@ body{
       }/*ul*/
     }/*nav*/
 
-
-  
   .btn-gnavi{
-  
     display: none;
-  
     @include tab{
       display: initial;
         position: fixed;
@@ -320,6 +337,7 @@ body{
       top: 30px;
       right: 7%;
     }
+
   }
   
   
@@ -336,13 +354,13 @@ body{
             -webkit-transition: all 400ms;
             transition: all 400ms;
             right: 0;
-          }
+      }
   
           @include sp-second{
             width: 45px;
           }
     
-  }/*span*/
+}/*span*/
   
     span:nth-of-type(1){
   
@@ -355,6 +373,7 @@ body{
   
         @include sp{
           width: 21px;
+          top: 0;
       }
   
     }/*span*/
@@ -413,18 +432,14 @@ body{
     -webkit-transform:translateY(-10px) rotate(230deg);
     transform: translateY(-10px) rotate(45deg);
     transition: 0.5s;
-    width: 40px;
 
-    @include sp{
-      width: 17px;
+    @include sp{      
       -webkit-transform:translateY(-5px) rotate(230deg);
-      transform: translateY(-5px) rotate(45deg);  
+      transform: translateY(-8px) rotate(45deg);  
     }
   }
     }/*warp*/
   }/*header*/
-
-
 
 
   .mainvisual{
@@ -438,7 +453,7 @@ body{
     @include sp(){
       background-size: 100% 100%;
       height: 395px;
-      background-image: url(../img/service/mv-mainvisual_sp.png);
+      background-image: url(../img/common/service_mv_sp.png);
     }
 
 
@@ -473,26 +488,28 @@ body{
         background-position: center;
 
 
+      
         @include pc{
           padding: 50px 0px;
           max-width: 500px;
           background-size: 480px 170px;
         }
 
-        @include tab{
-          max-width: 450px;
-          width: 90%;
-          padding: 30px 0px;
-          background-size: 410px 90px;
+        @include pc{
+          padding: 40px 0px;
+          max-width: 420px;
+          background-size: 380px 130px;
         }
 
 
         @include sp{
           max-width: 306px;
           width: 90%;
-          padding: 75px 0px 79px;
-          background-size: 240px 170px;
+          padding: 42px 0px 41px;
+          background-size: 250px 130px;
         }
+
+
 
         .top_inner_text{
           font-size: 27px;
@@ -504,6 +521,7 @@ body{
           }
 
           
+          
 
         }/*top_inner_text*/
 
@@ -511,12 +529,23 @@ body{
           font-weight: 900;
           font-size: 42px;
 
+          @include pc{
+            font-size: 32px;
+          }
+
           @include tab{
             font-size: 30px;
           }
 
           @include sp{
             font-size: 24px;
+          }
+
+          .br_sp{
+            display: none;
+            @include sp{
+              display: block;
+            }
           }
 
 
@@ -1160,6 +1189,7 @@ body{
                 background-color: #EAEEEF;
                 padding: 30px 36px;
                 margin-top: 21px;
+                border-radius: 7px;
 
                 @include tab{
                   padding: 30px 16px;

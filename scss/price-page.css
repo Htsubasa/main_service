@@ -537,21 +537,15 @@ html body header .header_wrap .header_nav {
 
 @media (max-width: 768px) {
   html body header .header_wrap .header_nav {
-    display: none;
-    width: 350px;
-    height: 100%;
-    color: black;
-    height: 100vh;
-    background-color: #ffffff;
-    text-align: center;
     position: fixed;
+    width: 300px;
     top: 0;
-    right: 0;
-    z-index: 1000;
+    right: -300px;
+    background-color: #ffffff;
+    height: 100%;
+    padding-top: 0px;
+    z-index: 3;
     margin-top: 0px;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    /* right0まで-250px移動 */
   }
 }
 
@@ -578,8 +572,14 @@ html body header .header_wrap .header_nav ul {
 @media (max-width: 768px) {
   html body header .header_wrap .header_nav ul {
     display: inline-block;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body header .header_wrap .header_nav ul #contact-drawer a {
+    background-color: #FBD362;
+    border-bottom: none;
   }
 }
 
@@ -613,6 +613,15 @@ html body header .header_wrap .header_nav ul .g-nav a {
   html body header .header_wrap .header_nav ul .g-nav a {
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
+    font-size: 16px;
+    padding: 14px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 560px) {
+  html body header .header_wrap .header_nav ul .g-nav a {
+    font-size: 14px;
   }
 }
 
@@ -682,6 +691,7 @@ html body header .header_wrap .btn-gnavi {
 @media (max-width: 560px) {
   html body header .header_wrap .btn-gnavi span:nth-of-type(1) {
     width: 21px;
+    top: 0;
   }
 }
 
@@ -740,14 +750,12 @@ html body header .header_wrap .btn-gnavi.hb-open span:nth-of-type(3) {
   transform: translateY(-10px) rotate(45deg);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  width: 40px;
 }
 
 @media (max-width: 560px) {
   html body header .header_wrap .btn-gnavi.hb-open span:nth-of-type(3) {
-    width: 17px;
     -webkit-transform: translateY(-5px) rotate(230deg);
-    transform: translateY(-5px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
   }
 }
 
@@ -764,7 +772,7 @@ html body .mainvisual {
   html body .mainvisual {
     background-size: 100% 100%;
     height: 395px;
-    background-image: url(../img/common/mainvisual-2_sp.png);
+    background-image: url(../img/price/mv_sp.png);
   }
 }
 
@@ -996,9 +1004,20 @@ html body .content_box h2 {
   html body .content_box h2 {
     text-align: center;
     margin-bottom: 20px;
-    padding-left: 0px;
-    height: 107px;
-    line-height: 107px;
+    height: auto;
+    line-height: 30px;
+    padding: 21px 0px 24px 0px;
+    background-image: url(../img/common/title_blue_sp.png);
+  }
+}
+
+html body .content_box h2 .br_sp {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  html body .content_box h2 .br_sp {
+    display: block;
   }
 }
 

@@ -219,20 +219,15 @@ body{
       margin-top: 39px;
 
       @include tab{
-        display: none;
-        width: 350px;
-        height: 100%;
-        color: rgb(0, 0, 0);
-        height: 100vh;
-        background-color: #ffffff;
-        text-align: center;
         position: fixed;
+        width: 300px;
         top: 0;
-        right: 0;
-        z-index: 1000;
+        right: -300px;
+        background-color: #ffffff;
+        height: 100%;
+        padding-top: 0px;
+        z-index: 3;
         margin-top: 0px;
-        transform: translateX(0); /* right0まで-250px移動 */
-
       }
 
       ul{
@@ -247,8 +242,18 @@ body{
 
         @include tab{
           display: inline-block;
-          padding-top: 80px;
-          padding-bottom: 80px;
+          padding-top: 120px;
+        }
+
+        #contact-drawer{
+
+          a{
+            @include tab{
+              background-color: #FBD362;
+              border-bottom: none;
+            }
+
+          }
         }
 
         .g-nav{
@@ -279,6 +284,13 @@ body{
             -webkit-transform: skewX(0deg);
             -moz-transform: skewX(0deg);
             transform: skewX(0deg); 
+            font-size: 16px;
+            padding: 14px 20px;
+            border-bottom: 1px solid #ccc;
+          }
+
+          @include sp{
+            font-size: 14px;
           }
 
           }
@@ -292,12 +304,8 @@ body{
       }/*ul*/
     }/*nav*/
 
-
-  
   .btn-gnavi{
-  
     display: none;
-  
     @include tab{
       display: initial;
         position: fixed;
@@ -315,6 +323,7 @@ body{
       top: 30px;
       right: 7%;
     }
+
   }
   
   
@@ -331,13 +340,13 @@ body{
             -webkit-transition: all 400ms;
             transition: all 400ms;
             right: 0;
-          }
+      }
   
           @include sp-second{
             width: 45px;
           }
     
-  }/*span*/
+}/*span*/
   
     span:nth-of-type(1){
   
@@ -350,6 +359,7 @@ body{
   
         @include sp{
           width: 21px;
+          top: 0;
       }
   
     }/*span*/
@@ -408,18 +418,14 @@ body{
     -webkit-transform:translateY(-10px) rotate(230deg);
     transform: translateY(-10px) rotate(45deg);
     transition: 0.5s;
-    width: 40px;
 
-    @include sp{
-      width: 17px;
+    @include sp{      
       -webkit-transform:translateY(-5px) rotate(230deg);
-      transform: translateY(-5px) rotate(45deg);  
+      transform: translateY(-8px) rotate(45deg);  
     }
   }
     }/*warp*/
   }/*header*/
-
-
   
 
   .mainvisual{
