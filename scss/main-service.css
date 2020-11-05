@@ -586,6 +586,16 @@ html body .no-scroll header .header_wrap .header_nav ul {
   }
 }
 
+html body .no-scroll header .header_wrap .header_nav ul #contact-drawer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll header .header_wrap .header_nav ul #contact-drawer {
+    display: block;
+  }
+}
+
 html body .no-scroll header .header_wrap .header_nav ul .g-nav {
   border-right: 1px solid #222222;
   color: #222222;
