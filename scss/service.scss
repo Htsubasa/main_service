@@ -41,11 +41,31 @@ $sp-second: 425px;  // スマホ
     padding-left: 34px;
     height: 76px;
     line-height: 76px;
-    width: 880px;
+    max-width: 880px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 34px;
     font-weight: 900;
     letter-spacing: 0.65px;
+
+  
+    @include tab{
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      font-size: 22px;
+      padding-left: 20px;
+      background-size: 100% 100%;
+    }
+
+    @include sp{
+      text-align: center;
+      margin-bottom: 20px;
+      padding-left: 0px;
+      height: auto;
+      line-height: 30px;
+      padding: 21px 0px 24px 0px;
+    }
 }
 
 html{
@@ -54,12 +74,21 @@ body{
   font-family: 'Noto Sans JP', sans-serif;
   color: #222222;
 
+  
   header{
     .header_wrap{
-      max-width: 1060px;
-      width: 100%;
+      max-width: 1500px;
+      width: 95%;
       margin: 0 auto;
       padding: 32px 0 31px ;
+
+      @include pc{
+        max-width: 1024px;
+        width: 95%;
+      }
+
+      @include sp{
+        padding: 14px 0 14px ;      }
 
       .header_block{
         display: flex;
@@ -67,15 +96,29 @@ body{
     
       .header_logo{
         display: flex;
+
         img{
           width: 70px;
         }/*img*/
 
         h1{
           font-size: 34px;
+
+          @include pc{
+            font-size: 30px;
+          }
+
+          @include sp{
+            font-size: 18px;
+          }
+
           .header_logo_sub{
             display: block;
             font-size: 15px;
+
+            @include sp{
+              font-size: 10px;
+            }
           }/*logo_sub*/
         }/*h1*/
       }/*logo*/
@@ -86,33 +129,61 @@ body{
         color: #6B7483;
         font-weight: bold;
 
+        @include tab{
+          display: none;
+        }
+
         .header_contact{
           text-align: center;
           padding-right: 24.4px;
           border-right: 1px solid #6B7483;
+          font-size: 18px;
+
+
+          @include pc{
+            padding-right: 12px;
+            font-size: 14px;
+          }
+  
         }
 
         .header_tel{
           padding-left: 25.6px;
           margin-right: 23px;
+          font-size: 20px;
 
-          p{
+          @include pc{
+            display: none;
+          }
+
+          .area{
+            font-size: 18px;
+
             
             span{
               margin-left: 12px;
               font-family: 'Oswald', sans-serif;
               font-weight: 500;
+              font-size: 20px;
+
               img{
-                width: 13px;
-              }
-            }
-          }
+                width: 19px;
+                height: 18px;
+                margin-right: 2px;
+              }/*img*/
+            }/*span*/
+          }/*area*/
 
         }
 
         .btn{
           width: 218px;
           margin: 0 auto;
+
+          @include pc{
+            margin-left: 10px;
+            width: 200px;
+          }
 
           @include tab{
               width: 250px;
@@ -152,11 +223,40 @@ body{
     .header_nav{
       margin-top: 39px;
 
+      @include tab{
+        display: none;
+        width: 350px;
+        height: 100%;
+        color: rgb(0, 0, 0);
+        height: 100vh;
+        background-color: #ffffff;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        margin-top: 0px;
+        transform: translateX(0); /* right0まで-250px移動 */
+
+      }
+
       ul{
         display: flex;
         justify-content: center;
 
-        li{
+        @include pc{
+          margin: 0 auto;
+          flex-wrap: wrap;
+          width: 650px;
+        }
+
+        @include tab{
+          display: inline-block;
+          padding-top: 80px;
+          padding-bottom: 80px;
+        }
+
+        .g-nav{
           border-right: 1px solid #222222;
           color: #222222;
           list-style: none;
@@ -164,36 +264,198 @@ body{
           -moz-transform: skewX(150deg);
           transform: skewX(150deg);
 
+          @include tab{
+            -webkit-transform: skewX(0deg);
+            -moz-transform: skewX(0deg);
+            transform: skewX(0deg); 
+            border-right: none;
+          }
+
           a{
             padding: 0 18px;
             display:block;
             transform: skewX(-150deg);
             font-size: 18px;
             font-weight: bold;
+            letter-spacing: 0.9px;
+
+
+          @include tab{
+            -webkit-transform: skewX(0deg);
+            -moz-transform: skewX(0deg);
+            transform: skewX(0deg); 
+          }
+
           }
 
         }/*li*/
+
+        li:last-child{
+          border-right: none;
+        }/*last-child*/
+
       }/*ul*/
     }/*nav*/
 
+
+  
+  .btn-gnavi{
+  
+    display: none;
+  
+    @include tab{
+      display: initial;
+        position: fixed;
+        top: 50px;
+        right: 4%;
+        width: 30px;
+        height: 24px;
+        z-index: 4;
+        cursor: pointer;
+        transition: all 400ms;
+        -webkit-transition:all 400ms;
+    }
+  
+    @include sp{
+      top: 30px;
+      right: 7%;
+    }
+  }
+  
+  
+  .btn-gnavi{
+    z-index: 1000;
+  
+    @include sp-second{
+    }
+
+    span{
+        @include tab{
+            position: absolute;
+            height: 3px;
+            -webkit-transition: all 400ms;
+            transition: all 400ms;
+            right: 0;
+          }
+  
+          @include sp-second{
+            width: 45px;
+          }
+    
+  }/*span*/
+  
+    span:nth-of-type(1){
+  
+        @include tab{
+            top: 0;
+            z-index: 1000;
+            width: 40px;
+            background-color: #ED974C;
+        }
+  
+        @include sp{
+          width: 21px;
+      }
+  
+    }/*span*/
+  
+    span:nth-of-type(2){
+  
+        @include tab{
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            background-color: #F7CD68;
+        }
+  
+        @include sp{
+          width: 21px;
+          top: 7px;
+      }
+  
+    }/*span*/
+  
+    span:nth-of-type(3){
+        @include tab{
+            top: 20px;
+            z-index: 1000;
+            width: 40px;
+            background-color: #71C1C0;
+        }
+  
+        @include sp{
+          width: 21px;
+          top: 14px;
+      }
+  
+    }/*span*/
+    
+  
+  }/*btn-gnavi*/
+  
+  
+  
+ .btn-gnavi.hb-open span:nth-of-type(1) {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
+    transition: 0.5s;
+
+    @include sp{
+      -webkit-transform: translateY(5px) rotate(-45deg);
+      transform: translateY(5px) rotate(-45deg);
+    }
+
+  }
+  .btn-gnavi.hb-open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .btn-gnavi.hb-open span:nth-of-type(3) {
+    -webkit-transform:translateY(-10px) rotate(230deg);
+    transform: translateY(-10px) rotate(45deg);
+    transition: 0.5s;
+    width: 40px;
+
+    @include sp{
+      width: 17px;
+      -webkit-transform:translateY(-5px) rotate(230deg);
+      transform: translateY(-5px) rotate(45deg);  
+    }
+  }
     }/*warp*/
   }/*header*/
 
+
+
+
   .mainvisual{
-    background-image: url(../img/service/mv-mainvisual.png);
-    background-size: contain;
+    background-image: url(../img/common/service_mv.png);
+    background-size: cover;
     background-repeat: no-repeat;
     height: 45vw;
     width: 100%;
     position: relative;
 
+    @include sp(){
+      background-size: 100% 100%;
+      height: 395px;
+      background-image: url(../img/service/mv-mainvisual_sp.png);
+    }
+
 
     &_wrap{
       background-image: url(../img/service/mv-background.png);
-      background-size: contain;  
+      background-size: cover;  
       background-repeat: no-repeat;
       height: 45vw;
       width: 100%;
+
+
+      @include sp(){
+        background-size: 100% 100%;
+        height: 395px;
+        background-image: url(../img/common/mv-background_sp.png);
+      }
+
 
       .mv_inner_text{
         background-color: #FFFFFF;
@@ -209,16 +471,55 @@ body{
         transform : translate(-50%,-50%);
         background-image: url(../img/common/border-colorful.png);
         background-position: center;
-        
+
+
+        @include pc{
+          padding: 50px 0px;
+          max-width: 500px;
+          background-size: 480px 170px;
+        }
+
+        @include tab{
+          max-width: 450px;
+          width: 90%;
+          padding: 30px 0px;
+          background-size: 410px 90px;
+        }
+
+
+        @include sp{
+          max-width: 306px;
+          width: 90%;
+          padding: 75px 0px 79px;
+          background-size: 240px 170px;
+        }
+
         .top_inner_text{
           font-size: 27px;
           font-weight: 900;
+
+          @include sp{
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          
 
         }/*top_inner_text*/
 
         .top_inner_title{
           font-weight: 900;
           font-size: 42px;
+
+          @include tab{
+            font-size: 30px;
+          }
+
+          @include sp{
+            font-size: 24px;
+          }
+
+
         }/*inner_title*/
 
       }/*mv-inner-teext*/
@@ -232,8 +533,18 @@ body{
   margin-top: 136px;
   margin-bottom: 120px;
 
+  @include tab{
+    margin-top: 100px;
+  }
+
+  @include sp{
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+
   .intro_wrap{
       text-align: center;
+
       .top_text{
           font-size: 25px;
           color: #6B7483;
@@ -241,6 +552,22 @@ body{
           font-weight: bold;
           letter-spacing: 0.625px;
           margin-bottom: 98px;
+
+          @include pc(){
+            font-size: 22px;
+          }
+
+          @include tab{
+            font-size: 18px;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+          }
+
+          @include sp{
+            font-size: 15px;
+          }
+
       }/*text*/
 
       .intro_block{
@@ -250,9 +577,27 @@ body{
       margin: 0 auto;
       align-items: center;
 
+      @include tab{
+        display: block;
+        width: 400px;
+      }
+
+      @include sp{
+        width: 90%;
+      }
+
+
       .intro_pic{
           width: 31.3vw;
           height: 23.3vw;
+
+          @include tab{
+            width: 300px;
+            height: 240px;
+          }
+
+
+
       }/*intro_pic*/
 
       .intro_block_text{
@@ -261,6 +606,13 @@ body{
           letter-spacing: 0.4px;
           line-height: 1.8;
           text-align: left;
+
+          @include tab{
+            margin-top: 40px;
+          }
+
+     
+          
       }
 
       }/*block*/
@@ -269,8 +621,22 @@ body{
 }/*introtop*/
 
 
-
   .content{
+    margin-top: 85px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+    @include tab{
+      margin-right: 25px;
+      margin-left: 25px;  
+    }
+
+    @include sp{
+      margin-top: 35px; 
+      margin-right: 15px;
+      margin-left: 15px;  
+    }
+
       &_box{
           max-width: 1200px;
           width: 100%;
@@ -278,6 +644,18 @@ body{
           padding: 94px 160px 134px 160px;
           box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.16);
           border-radius: 41px;
+
+          @include pc{
+            padding: 94px 90px 134px 90px;
+          }
+  
+          @include tab{
+            padding: 67px 30px 70px 30px;
+          }/*pc*/
+
+          @include sp-second(){
+            padding: 67px 18px 70px 18px;
+          }/*pc*/
   
 
           h2{
@@ -294,14 +672,40 @@ body{
                   padding-left: 48px;
                   padding-top: 42px;
                   padding-bottom: 39px;
+                  padding-right: 25px;
+
+                  @include sp{
+                    padding-top: 28px;
+                    padding-bottom: 28px;
+                    padding-left: 28px;
+                    }
 
                   li{
                       list-style: none;
                       font-size: 22px;
                       line-height: 2.5;
 
+                      @include pc{
+                        font-size: 20px;
+                      }
+
+                      @include tab{
+                        font-size: 16px;
+                      }
+
+                      @include sp{
+                        font-size: 14px;
+                      }
+
                       img{
                           margin-right: 13px;
+
+
+                      @include sp{
+                        width: 17px;
+                      }
+
+
                       }/*img*/
 
                   }/*li*/
@@ -311,36 +715,112 @@ body{
           .example{
             margin-bottom: 109px;
 
-            img{
+            .gray_img{
               display: flex;
               margin: 0 auto;
 
+              @include pc{
+                max-width: 734px;
+                width: 100%;
+              }
+
+              @include sp{
+                display: none;
+              }
+
             }
+
+            .sp_gray_img{
+              display: none;
+
+              @include sp{
+                display: block;
+                margin: 0 auto;
+              }
+
+            }
+
+
             &_block{
               display: flex;
               justify-content: center;
 
+              @include pc{
+                display: block;
+              }
+
               .example_box{
                 display: flex;
+
+                @include pc{
+                  justify-content: center;
+                  margin-top: 50px;
+                }
+
+                
+                @include sp{
+                }
 
                 #female_pic{
                   margin-right: 20px;
                   margin-left: 38px;
+
+                  @include pc{
+                    margin-left: 32px;
+                    width: 120px;
+                    height: 360px;
+                  }/*pc*/
+
+                  @include tab{
+                    width: 90px;
+                    height: 300px;
+                  }
+
+                  @include sp{
+                    margin-left: 20px;
+                    height: 280px;
+                    width: 79px;
+                    display: flex;
+                  }
+
                 }
 
                 #male_pic{
                   margin-left: 30px;
                   margin-right: 42px;
+
+                  @include pc{
+                    margin-right: 38px;
+                    width: 120px;
+                    height: 360px;
+                  }/*pc*/
+
+                  @include sp{
+                    margin-right: 10px;
+                    margin-left: 0px;
+                    height: 280px;
+                    width: 79px;
+                    display: flex;
+                  }
+
                 }
 
                 .profile_block{
                   margin-top: 34px;
+
+                  @include sp{
+                    width: 200px;
+                    margin-top: 0px;
+                  }
+
+                  @include sp-second(){
+                  }
+
+
                   .name{
                     color: #989898;
                     font-size: 15px;
                     margin-bottom: 14px;
-                
-                
                   }/*name*/
 
                   .check{
@@ -364,6 +844,10 @@ body{
                     color: #F79E46;
                     font-weight: 900;
                     letter-spacing: 0.5px;
+
+                    @include sp{
+                    }
+
                   }/*symptom*/
 
                   .profile_text{
@@ -373,6 +857,12 @@ body{
                     width: 266px;
                     letter-spacing: 0.375px;
                     line-height: 1.8;
+
+                    @include sp{
+                      margin-top: 17px;
+                      width: 100%;
+                    }
+
                   }/*text*/
 
                 }/*profile*/
@@ -381,6 +871,16 @@ body{
           }/*example*/
 
           .curriculum{
+
+            .curriculum_title{
+              .sp_br{
+                display: none;
+                @include sp{
+                  display: initial;
+                }
+              }
+            }
+
               .curriculum_text{
                   color: #222222;
                   line-height: 1.8;
@@ -392,8 +892,18 @@ body{
               .flow{
                 margin-bottom: 148px;
 
+                @include sp{
+                  margin-bottom: 70px;
+                }
+
                 .arrow_down{
                   margin-left: 190px;
+
+                  @include sp{
+                    display: flex;
+                    margin: 0 auto;
+                  }
+
                 }
 
                   .program{
@@ -404,12 +914,23 @@ body{
                       border-radius: 33px;
                       max-width: 784px;
                       margin: 0 auto;
+                      
+                      @include sp{
+                        display: block;
+                        padding: 36px 0px 30px 0px;
+                      }
 
 
                       .program_item{
                           text-align: center;
                           margin: 0 60px;
 
+                          @include sp{
+                            display: block;
+                            margin-right: 0px;
+                            margin-left: 0px;
+                            margin-bottom: 40px;
+                          }
 
                           h3{
                               color: #F79E46;
@@ -418,13 +939,24 @@ body{
                               line-height: 1.4;
                               letter-spacing: 0.4px;
                           }
+
                           img{
                               margin-top: 24px;
                               margin-bottom: 27px;
                               width: 156px;
                               border-radius: 50%;
                               box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+                            @include tab{
+                              width: 23vw;
+                            }
+
+                            @include sp{
+                              width:200px;
+                            }
+
                           }
+
                           .program_text{
                               font-size: 14px;
                               line-height: 1.6;
@@ -438,6 +970,9 @@ body{
                     display: flex;
                     justify-content: space-evenly;
 
+                    @include sp{
+                      display: block;
+                    }
 
                     .program_item{
                         background-color: #FFF9E8;
@@ -445,6 +980,16 @@ body{
                         padding: 36px 0px;
                         border-radius: 33px;
                         width: 334px;
+
+                        @include tab{
+                          width: 100%;
+                        }
+
+                        @include sp{
+                          display: block;
+                          margin-right: 0px;
+                          margin-left: 0px;
+                        }
 
                         h3{
                             color: #F79E46;
@@ -459,10 +1004,22 @@ body{
                             width: 156px;
                             border-radius: 50%;
                             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+
+                            @include tab{
+                              width: 23vw;
+                            }
+
+                            @include sp{
+                              width:200px;
+                            }
+
                         }
                         .program_text{
                             font-size: 14px;
                             line-height: 1.6;
+
+    
                         }
 
                     }/*item*/
@@ -471,25 +1028,69 @@ body{
                       width: 70px;
                       height: 60px;
                       margin-top: 170px;
-                    }
+
+
+                      @include sp{
+                        display: none;
+                      }
+
+                    }/*arrowright*/
+
+                    
+                #arrow_down_middle{
+                  display: none;
+
+                  @include sp{
+                    display: flex;
+                    margin: 0 auto;
+                    
+                  }
+
+                }
+
 
                   }
               }/*flow*/
           }/*curriculum*/
 
           .bubble_part{
-              display: flex;
-              margin-bottom: 53.9px;
-              padding-top: 20px;
-              justify-content: space-between;
+            display: flex;
+            margin-bottom: 53.9px;
+            justify-content: space-between;
 
-              p{
+            @include tab{
+              display: block;
+            }
+
+            .bubble_text{
                 width: 520px;
-                font-size: 16px;
-                line-height: 1.8;
-              }
-          }
+                line-height: 1.875;
 
+                @include tab{
+                  width: 100%;
+                }
+            }
+
+            img{
+                margin-right: 30px;
+                margin-left: 20px;
+                width: 277px;
+                height: 164px;
+
+                @include tab{
+                  margin-left: auto;
+                  display: flex;
+                  margin-top: 20px;
+                }
+
+                @include sp-second(){
+                  width: 200px;
+                  height: 120px;
+                }
+
+
+            }/*img*/
+        }
           .free_class_text{
             letter-spacing: 0.4px;
             line-height: 1.875;
@@ -498,8 +1099,27 @@ body{
           .consulting_flow{
             display: flex;
             margin-top: 28px;
+            width: 100%;
+
+            @include tab{
+              display: block;
+              text-align: center;
+            }
+
             &_box{
               text-align: center;
+
+              @include pc{
+                width: 70%;
+              }
+              @include tab{
+                margin:  0 auto;
+              }
+
+              @include sp{
+                width: 100%;
+              }
+
 
               h3{
                 color: #F79E46;
@@ -509,11 +1129,33 @@ body{
               #consulting_flow_pic{
                 margin-top: 22px ;
                 margin-bottom: 30px;
+
+              @include pc{
+                width: 70%;
+              }
+
+
+              @include sp{
+                width: 100%;
+              }
+
+
               }/*consulting_flow_pic*/
 
               .consulting_flow_text{
                 font-weight: 500;
                 line-height: 1.88;
+                font-size: 17px;
+
+                .br_text{
+                  display: none;
+
+                  @include sp{
+                    display: block;
+                  }
+                }
+
+
               }
 
               .free_block{
@@ -521,48 +1163,97 @@ body{
                 padding: 30px 36px;
                 margin-top: 21px;
 
+                @include tab{
+                  padding: 30px 16px;
+                }
+
+           
                 .free_title{
                   font-size: 20px;
                   font-weight: bold;
                   margin-bottom: 16px;
                 }/*title*/
 
-
-
+                p{
+                  font-size: 14px;
+                }
               }/*free_block*/
 
             }/*box*/
+
+            .side_img{
+              @include sp{
+                display: none;
+              }
+            }
+
           }/*consulting_flow*/
-
-
-
 
       }/*box*/
   }/*content*/
 
 
-.contact_wrap{
+
+
+  .contact_wrap{
     margin-bottom: 94px;
     margin-top: 109px;
+
+    @include sp{
+      margin-bottom: 70px;
+      margin-top: 90px;
+      text-align: center;
+    }
 
     .contact_title{
       font-size: 26px;
       margin-bottom: 36px;
       text-align: center;
+
+      @include tab{
+        font-size: 22px;
+      }/*tab*/
+
+      @include sp{
+        display: none;
+      }
+
+
     }
+
+    .contact_title_sp{
+      display: none;
+
+      @include sp{
+        display: block;
+        font-size: 20px;
+        margin-bottom: 16px;
+        width: 100%;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+
+    }
+
 
     .btn{
         width: 708px;
         margin: 0 auto;
         height: 82px;
+  
 
         @include tab{
-            width: 250px;
+          max-width: 700px;
+          width: 85%;
+          height: auto;
         }
 
         @include sp{
-            margin: 0 auto;
-            width: 99%;
+          width: 92.5%;
+          margin: 0 auto;
+        }
+
+        @include sp-second(){
         }
 
         a{
@@ -578,11 +1269,20 @@ body{
             line-height: 82px;
             height: 82px;
 
-            
-            @include sp{
-                padding: 20px 0px;
+            @include tab{
+              font-size: 22px;
+              height: 75px;
+              line-height: 75px;
             }
 
+            @include sp{
+              font-size: 20px;
+              height: 67px;
+              line-height: 67px;
+            }
+
+      
+         
         }/*a*/
     }/*btn*/
 
@@ -597,6 +1297,12 @@ body{
         font-weight: bold;
         font-size: 18px;
         letter-spacing: 0.45px;
+
+        @include sp{
+          font-size: 16px;
+          margin-top: 18px;
+          margin-bottom: 21px;
+        }
     }
 
     .contact_tel{
@@ -606,11 +1312,22 @@ body{
         justify-content: center;
         margin-top: 13px;
 
+        @include sp{
+          display: block;
+          margin-right: 0px;
+          text-align: center;
+          padding-left: 0px;
+        }
+
         p{
             color: #F79E46;
             letter-spacing: 2.6px;
             font-weight: bold;
             font-size: 26px;
+
+            @include tab{
+              font-size: 26px;
+            }
 
           .number{
             margin-left: 12px;
@@ -620,10 +1337,26 @@ body{
             align-items: center;
             font-size: 28px;
 
+
+            @include tab{
+              font-size: 22px;
+            }
+            @include sp{
+              font-size: 28px;
+            }
+
             img{
               width: 18px;
               margin-left: 17.4px;
               margin-right: 4px;
+
+              @include tab{
+                margin-left: 8px;
+                margin-right: 4px;
+                width: 14px;
+                }
+
+
             }/*img*/
 
           }/*span*/
@@ -632,15 +1365,35 @@ body{
 
       #shinjuku{
           margin-right: 18px;
-      }
+
+
+          @include tab{
+            margin-right: 12px;
+          }
+
+          @include sp{
+            margin-right: 0px;
+          }
+      }/*shinjuku*/
 
       #yokohama{
         margin-left: 18px;
-    }
+
+        @include tab{
+          margin-right: 12px;
+        }
+
+        @include sp{
+          margin: 0 auto;
+        }
+
+
+    }/*yokohama*/
 
 
 
 }/*contact_wrap*/
+
 
 
   
@@ -657,11 +1410,35 @@ body{
 
       @include pc{
         padding-right:20px;
-        padding-left: 20px;
+        padding-left: 0px;
       }
+
+      @include sp{
+        display: block;
+        padding-right:0px;
+        padding-left: 0px;
+        width: 300px;
+      }
+
+      @include sp{
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+
+
 
       .footer_nav{
         ul{
+
+          @include tab{
+            margin-left: 15px;
+          }
+
+          @include sp{
+            margin-top: 10px;
+          }
+
+        
           .nav_top_title{
             font-weight: bold;
             margin-bottom: 10px;
@@ -684,6 +1461,7 @@ body{
               font-size: 14px;
               margin-top: 14px;
             }
+
           }/*top_title*/
 
           li{
@@ -712,9 +1490,7 @@ body{
 
         }
       }
-
     }/*wrap*/
   }/*footer*/
-
 }/*body*/
 }

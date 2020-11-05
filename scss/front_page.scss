@@ -38,8 +38,8 @@ body{
   
   header{
     .header_wrap{
-      max-width: 1060px;
-      width: 100%;
+      max-width: 1500px;
+      width: 95%;
       margin: 0 auto;
       padding: 32px 0 31px ;
 
@@ -48,12 +48,16 @@ body{
         width: 95%;
       }
 
+      @include sp{
+        padding: 14px 0 14px ;      }
+
       .header_block{
         display: flex;
         justify-content: space-between;
     
       .header_logo{
         display: flex;
+
         img{
           width: 70px;
         }/*img*/
@@ -65,9 +69,17 @@ body{
             font-size: 30px;
           }
 
+          @include sp{
+            font-size: 18px;
+          }
+
           .header_logo_sub{
             display: block;
             font-size: 15px;
+
+            @include sp{
+              font-size: 10px;
+            }
           }/*logo_sub*/
         }/*h1*/
       }/*logo*/
@@ -78,10 +90,16 @@ body{
         color: #6B7483;
         font-weight: bold;
 
+        @include tab{
+          display: none;
+        }
+
         .header_contact{
           text-align: center;
           padding-right: 24.4px;
           border-right: 1px solid #6B7483;
+          font-size: 18px;
+
 
           @include pc{
             padding-right: 12px;
@@ -93,22 +111,29 @@ body{
         .header_tel{
           padding-left: 25.6px;
           margin-right: 23px;
+          font-size: 20px;
 
           @include pc{
             display: none;
           }
 
-          p{
+          .area{
+            font-size: 18px;
+
             
             span{
               margin-left: 12px;
               font-family: 'Oswald', sans-serif;
               font-weight: 500;
+              font-size: 20px;
+
               img{
-                width: 13px;
-              }
-            }
-          }
+                width: 19px;
+                height: 18px;
+                margin-right: 2px;
+              }/*img*/
+            }/*span*/
+          }/*area*/
 
         }
 
@@ -159,6 +184,23 @@ body{
     .header_nav{
       margin-top: 39px;
 
+      @include tab{
+        display: none;
+        width: 350px;
+        height: 100%;
+        color: rgb(0, 0, 0);
+        height: 100vh;
+        background-color: #ffffff;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        margin-top: 0px;
+        transform: translateX(0); /* right0まで-250px移動 */
+
+      }
+
       ul{
         display: flex;
         justify-content: center;
@@ -169,7 +211,13 @@ body{
           width: 650px;
         }
 
-        li{
+        @include tab{
+          display: inline-block;
+          padding-top: 80px;
+          padding-bottom: 80px;
+        }
+
+        .g-nav{
           border-right: 1px solid #222222;
           color: #222222;
           list-style: none;
@@ -177,12 +225,28 @@ body{
           -moz-transform: skewX(150deg);
           transform: skewX(150deg);
 
+          @include tab{
+            -webkit-transform: skewX(0deg);
+            -moz-transform: skewX(0deg);
+            transform: skewX(0deg); 
+            border-right: none;
+          }
+
           a{
             padding: 0 18px;
             display:block;
             transform: skewX(-150deg);
             font-size: 18px;
             font-weight: bold;
+            letter-spacing: 0.9px;
+
+
+          @include tab{
+            -webkit-transform: skewX(0deg);
+            -moz-transform: skewX(0deg);
+            transform: skewX(0deg); 
+          }
+
           }
 
         }/*li*/
@@ -194,14 +258,144 @@ body{
       }/*ul*/
     }/*nav*/
 
+
+  
+  .btn-gnavi{
+  
+    display: none;
+  
+    @include tab{
+      display: initial;
+        position: fixed;
+        top: 50px;
+        right: 4%;
+        width: 30px;
+        height: 24px;
+        z-index: 4;
+        cursor: pointer;
+        transition: all 400ms;
+        -webkit-transition:all 400ms;
+    }
+  
+    @include sp{
+      top: 30px;
+      right: 7%;
+    }
+  }
+  
+  
+  .btn-gnavi{
+    z-index: 1000;
+  
+    @include sp-second{
+    }
+
+    span{
+        @include tab{
+            position: absolute;
+            height: 3px;
+            -webkit-transition: all 400ms;
+            transition: all 400ms;
+            right: 0;
+          }
+  
+          @include sp-second{
+            width: 45px;
+          }
+    
+  }/*span*/
+  
+    span:nth-of-type(1){
+  
+        @include tab{
+            top: 0;
+            z-index: 1000;
+            width: 40px;
+            background-color: #ED974C;
+        }
+  
+        @include sp{
+          width: 21px;
+      }
+  
+    }/*span*/
+  
+    span:nth-of-type(2){
+  
+        @include tab{
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            background-color: #F7CD68;
+        }
+  
+        @include sp{
+          width: 21px;
+          top: 7px;
+      }
+  
+    }/*span*/
+  
+    span:nth-of-type(3){
+        @include tab{
+            top: 20px;
+            z-index: 1000;
+            width: 40px;
+            background-color: #71C1C0;
+        }
+  
+        @include sp{
+          width: 21px;
+          top: 14px;
+      }
+  
+    }/*span*/
+    
+  
+  }/*btn-gnavi*/
+  
+  
+  
+ .btn-gnavi.hb-open span:nth-of-type(1) {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
+    transition: 0.5s;
+
+    @include sp{
+      -webkit-transform: translateY(5px) rotate(-45deg);
+      transform: translateY(5px) rotate(-45deg);
+    }
+
+  }
+  .btn-gnavi.hb-open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .btn-gnavi.hb-open span:nth-of-type(3) {
+    -webkit-transform:translateY(-10px) rotate(230deg);
+    transform: translateY(-10px) rotate(45deg);
+    transition: 0.5s;
+    width: 40px;
+
+    @include sp{
+      width: 17px;
+      -webkit-transform:translateY(-5px) rotate(230deg);
+      transform: translateY(-5px) rotate(45deg);  
+    }
+  }
     }/*warp*/
   }/*header*/
+
+
 
   .mainvisual{
     background-color: #FEFFEF;
     padding-top: 81.5px;
     padding-bottom: 80px;
     overflow: hidden;
+
+    @include pc{
+      padding-bottom: 120px;  
+    }
 
 
     &_wrap{
@@ -215,8 +409,12 @@ body{
 
       .mainvisual_text{
         text-align: center;
-        margin-left: 12.8vw;
+        margin-left: 10vw;
         margin-top: 66px;
+
+        @include pc{
+          margin-left: 6vw;
+        }
 
         .color_circle{
           display: flex;
@@ -319,10 +517,14 @@ body{
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%); 
-
       
+      @include pc{
+        width: 80%;
+    }
+
       @include sp(){
           margin-bottom: 45px;
+          width: 92%;
       }
 
       .article{
@@ -333,9 +535,18 @@ body{
           padding-right: 37.5px;
           padding-left: 37.5px;    
 
-          @include tab{
+          @include pc{
               width: 100%;
           }
+
+          @include tab{
+            width: 100%;
+        }
+
+        @include sp{
+          padding-right: 23px;
+          padding-left: 23px;    
+        }
 
           a{
               display: flex;
@@ -343,9 +554,8 @@ body{
               padding: 24px 0px 24px 0px;
               border-bottom: 1px dotted #B4B4B4;
 
-
               @include tab{
-                  display: block;
+                display: block;
               }
 
               @include sp{
@@ -356,17 +566,23 @@ body{
             color: #F79E46;
             font-weight: bold;
             font-size: 15px;
-          }
 
-          .date{
+            @include tab{
+              margin-bottom: 5px;
+            }
+
+            @include sp{
+              font-size: 13px;
+            }
+
+            .date{
               color: #727272;
               margin-left: 18.5px;
               margin-right: 23px;
               font-size: 15px;
 
               @include tab{
-                  margin-left: 0px;
-                  margin-bottom: 11px;
+                  font-size: 13px;
               }
 
               @include sp{
@@ -374,9 +590,16 @@ body{
               }
 
           }/*date*/
+          }
+
+   
           .article_text{
               font-size: 15px;
               color: #000000;
+
+              @include tab{
+                font-size: 13px;
+              }
 
               @include sp{
                   font-size: 14px;
@@ -423,6 +646,18 @@ body{
           align-items: center;
           justify-content: center; /* 水平中心 */
           margin-bottom: 14px;
+
+          @include sp{
+            text-align: center;
+            font-size: 15px;
+          }
+
+          .group_list_br{
+            display: none;
+            @include sp{
+              display: block;
+            }
+          }
         }/*intro*/
 
         &_intro:before,
@@ -430,6 +665,10 @@ body{
           border-top: 1px solid #6B7483;
           content: "";
           flex-grow: 0.06;
+          @include sp{
+            flex-grow: 0.3;
+          }
+
         }
         &_intro:before {
           margin-right: 1.5rem;
@@ -446,8 +685,31 @@ body{
           max-width: 1200px;
           margin: 0 auto;
 
+          @include pc{
+            flex-wrap: wrap;
+            max-width: 750px;
+            justify-content: space-evenly;
+          }
+
+
+          @include sp{
+            display: block;
+            text-align: center;
+            width: 93%;
+            padding: 33px 27px 30px 28px;
+          }
+
+
           #group_logo1{
             width: 308px;
+            @include pc{
+              margin-bottom: 20px;
+             }
+
+             @include sp{
+              width: 290px;
+             }
+          
           }/*group_logo1*/
 
           .logo_name{
@@ -456,6 +718,18 @@ body{
             margin: 0 auto;
             align-items: center;
 
+            @include pc{
+              margin: 0;
+              margin-bottom: 20px;
+              margin-right: 20px;
+              margin-left: 20px;
+             }
+
+
+          @include sp{
+            justify-content: center;
+          }
+
             #group_logo2{
               width: 63px;
             }/*group_logo*/
@@ -463,6 +737,12 @@ body{
 
             .grooup_logo2_text{
               font-size: 19px;
+
+              @include sp{
+                font-size: 19px;
+              }
+              
+
             }
 
             #group_logo3{
@@ -495,21 +775,59 @@ body{
         max-width: 1200px;
         width: 100%;
 
+        @include tab{
+          flex-wrap: wrap;
+        }
+
         img{
           width: 40.5vw;
           height: 19.65vw;
+
+          @include tab{
+            margin:  0 auto;
+            order: 2;
+            width: 450px;
+            height: 250px;
+            margin-top: 60px;
+          }
+
+          @include sp{
+            width: 345px;
+            height: auto;
+          }
+
+          @include sp-second(){
+            width: 92.5%;
+          }
         }
 
         .concept_text_block{
           width: 500px;
           margin-left: 55.8px;
 
+          @include tab{
+            margin:  0 auto;
+            order: 1;
+          }
+
+
+          @include sp{
+            width: 380px;
+          }
+
+          @include sp-second(){
+            width: 92.5%;
+          }
           .concept_en{
             font-size: 34px;
             color: #F79E46;
-            font-weight: 900;
+            font-weight: 800;
             letter-spacing: 0.85px;
             font-family: 'Raleway', sans-serif;
+
+            @include sp{
+              font-size: 24px;
+            }
         }
 
           .concept_title{
@@ -517,6 +835,9 @@ body{
             color: #222222;
             margin: 16px 0 25px;
             letter-spacing: 1.6px;
+            @include sp{
+              font-size: 28px;
+            }
           }
 
           .concept_text{
@@ -524,6 +845,9 @@ body{
             color: #222222;
             letter-spacing: 0.425px;
             line-height: 1.8;
+            @include sp{
+              font-size: 15px;
+            }
           }
 
         }/*text_block*/
@@ -537,19 +861,20 @@ body{
 .content{
 
   &_wrap{
-      padding-top: 264px;
+      padding-top: 130px;
       padding-bottom: 105px;
+      background-image: url(../img/front/background.png);
+      background-size: 100% 100%;
 
       @include tab{
           padding-top: 500px;
       }
-  
-      @include sp{
-          max-width: 50vw;
-          padding-top: 58px;
-          padding-bottom: 45px;
-      }
 
+      @include sp{
+        padding: 80px;
+        padding-bottom: 360px;
+      }
+  
 
 
       .service_block{
@@ -589,7 +914,7 @@ body{
                   width: 89.4%;
                   margin: 0 auto;
                   order: 2;
-                  padding: 42px 24px 28px;
+                  padding: 20px 24px 46px;
               }
 
 
@@ -604,9 +929,9 @@ body{
                   }
 
                   @include sp{
-                      font-size: 26px;
+                      font-size: 24px;
                       padding-top: 25px;
-                      padding-bottom: 28px;    
+                      padding-bottom: 39px;    
                   }
               }
 
@@ -626,7 +951,7 @@ body{
 
               .text_area{
                   text-align: left;
-                  font-size: 17px;
+                  font-size: 15px;
                   line-height: 2;
                   letter-spacing: 0.375px;
                   line-height: 1.7;
@@ -634,7 +959,8 @@ body{
                   color: #222222;
 
                   @include sp{
-                      font-size: 13px;
+                      font-size: 15px;
+                      margin-bottom: 36px;
                   }
 
               }/*area*/
@@ -650,7 +976,7 @@ body{
           
                 @include sp{
                     margin: 0 auto;
-                    width: 99%;
+                    width: 218px;
                 }
           
                 a{
@@ -667,7 +993,7 @@ body{
           
                     
                     @include sp{
-                        padding: 20px 0px;
+                        padding: 18px 0px;
                     }
                 }/*a*/
 
@@ -681,14 +1007,66 @@ body{
 
             .character_img{
               position: absolute;
-              width: 15.4vw;
-              height: 11.6vw;
+              width: 178px;
+              height: auto;
               top: 260px;
-              right: -90px;
+              right: 50px;
 
               @include pc{
                 top: 320px;
                 right: -50px;
+              }
+
+              @include tab{
+                display: none;
+              }
+
+
+              @include sp{
+              }
+
+            }/*img*/
+
+            .character_img2{
+              position: absolute;
+              width: 224px;
+              height: auto;
+              top: 260px;
+              right: 20px;
+
+              @include pc{
+                top: 320px;
+                right: -50px;
+              }
+
+              @include tab{
+                display: none;
+              }
+
+
+              @include sp{
+              }
+
+            }/*img*/
+
+            .character_img3{
+              position: absolute;
+              width: 121px;
+              height: auto;
+              top: 220px;
+              right: 50px;
+
+              @include pc{
+                top: 320px;
+                right: -50px;
+              }
+
+              @include tab{
+                display: none;
+              }
+
+
+              @include sp{
               }
 
             }/*img*/
@@ -727,27 +1105,20 @@ body{
                   width: 80vw;
               }
 
-              @include sp{
-                  order: 1;
-                  width: 89.4%;
-                  margin: 0 auto;
-                  height: 258px;
-              }
+            
+             
+
 
           }
 
           .pc_pic{
-              @include sp{
-                  display: none;
-              }
+           
           }
 
           .sp_pic{
               display: none;
 
-              @include sp{
-                  display: block;
-              }
+           
           }
 
 
@@ -770,18 +1141,34 @@ body{
 
               @include tab{
                   right: 10vw;
-                  top: -400px;
+                  top: 300px;
               }
 
               @include sp{
-                  position: initial;
+                left: 0px;
+                right: 0px;
+                top: 40vw;
+                width: 92.5vw;
+                text-align: center;
               }
+
+          
 
           }
 
 
           #img_first{
               margin-left: auto;
+
+              @include tab{
+                margin:  0 auto;
+                width: 500px;
+                height: auto;
+              }
+
+              @include sp{
+                width: 100%;
+              }
           }
       }/*first*/
 
@@ -789,16 +1176,13 @@ body{
 
 
       #block_second{
-          margin-top: 264px;
+          margin-top: 120px;
 
           @include tab{
               margin-top: 450px;
           }
 
-          @include sp{
-              margin-top: 46px;
-          }
-
+      
 
           #box_second{
               position: absolute;
@@ -811,32 +1195,44 @@ body{
 
               @include tab{
                   left: 10vw;
-                  top: -400px;
+                  top: 300px;
               }
 
               @include sp{
-                  position: initial;
+                left: 0px;
+                right: 0px;
+                top: 40vw;
+                width: 92.5vw;
+                text-align: center;
               }
+
+         
 
           }
 
 
           #img_second{
               margin-right: auto;
+
+              @include tab{
+                margin:  0 auto;
+                width: 500px;
+                height: auto;
+              }
+              @include sp{
+                width: 100%;
+              }
           }
       }/*first*/
 
       #block_third{
-          margin-top: 264px;
+        margin-top: 123px;
 
           @include tab{
               margin-top: 450px;
           }
 
-          @include sp{
-              margin-top: 46px;
-          }
-         
+      
 
           #box_third{
               position: absolute;
@@ -850,18 +1246,31 @@ body{
 
               @include tab{
                   right: 10vw;
-                  top: -400px;
+                  top: 280px;
               }
 
               @include sp{
-                  position: initial;
+                left: 0px;
+                right: 0px;
+                top: 40vw;
+                width: 92.5vw;
               }
+       
 
           }
 
 
           #img_third{
               margin-left: auto;
+
+              @include tab{
+                margin:  0 auto;
+                width: 500px;
+                height: auto;
+              }
+              @include sp{
+                width: 100%;
+              }
           }
       }/*first*/
 
@@ -883,6 +1292,10 @@ body{
   height: auto;
   padding: 125px 0 123px 0;
 
+  @include tab{
+    padding: 100px 0 60px 0;
+  }
+
   .card_wrap{
     display: flex;
     width: 74.9%;
@@ -891,6 +1304,14 @@ body{
 
     @include pc{
       width: 100%;
+    }
+
+    @include tab{
+      flex-wrap: wrap;
+    }
+
+    @include sp{
+      display: block;
     }
 
     .card{
@@ -907,7 +1328,24 @@ body{
         width: 30vw;
       }
 
+      @include tab{
+        width: 40vw;
+        margin-bottom: 80px;
+        padding-bottom: 50px;
+        margin-right: 20px;
+        margin-left: 20px;
+      }    
+      @include sp{
+        width: 340px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        padding-top: 44px;
+      }
 
+      @include sp-second(){
+        width: 92.5%;
+      }
+  
     .card_tag{
       display: block;
       padding: 2.95vw 2.85vw 0px 2.85vw;
@@ -915,18 +1353,24 @@ body{
       @include pc{
       }
 
-
       img{
+        width: 77.5%;
 
-        width: 77.2%;
+        @include sp{
+          width: 200px;
+        }
+    
       }
 
       .card_title{
         margin: 29px 0 23px 0;
         font-size: 20px;
         color: #222222;
-        letter-spacing: 0.2px;
+        letter-spacing: 2px;
         font-weight: 900;
+        @include sp{
+          font-size: 18px;
+        }
       }
 
       .card_text{
@@ -934,6 +1378,12 @@ body{
         text-align: left;
         letter-spacing: 0.75px;
         line-height: 1.8;
+        color: #222222;
+        @include sp{
+          font-size: 15px;
+          width: 80%;
+          margin: 0 auto;
+        }
       }
     }
 
@@ -950,13 +1400,15 @@ body{
   
 
       @include tab{
-          width: 250px;
+          width: 200px;
       }
 
       @include sp{
           margin: 0 auto;
-          width: 99%;
+          width: 160px;
       }
+
+
 
       a{
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.16);
@@ -1003,6 +1455,16 @@ body{
       margin-left: 2vw;
     }
 
+    @include tab{
+      margin-right: 0vw;
+      margin-left: 0vw;
+    }
+
+    @include sp{
+      margin:  0 auto;
+      margin-bottom: 70px;
+    }
+
   }
 
   .card:hover{
@@ -1024,12 +1486,8 @@ body{
 }/*bloc*/
 
 
-
-
-
-
 .topic{
-    padding-top: 125px;
+    padding-top: 140px;
   
     @include sp(){
         padding-top: 66px;
@@ -1039,7 +1497,7 @@ body{
     &_wrap{
         width: 710px;
         margin: 0 auto;
-        padding-bottom: 130px;
+        padding-bottom: 137px;
   
         @include pc{
             width: 90%;
@@ -1055,9 +1513,9 @@ body{
             font-size: 45px;
             color: #222222;
             margin-bottom: 35px;
-            letter-spacing: 1.1px;
+            letter-spacing: 1.125px;
             text-align: center;
-            font-weight: 900;
+            font-weight: 800;
             font-family: 'Raleway', sans-serif;
   
             @include sp{
@@ -1067,7 +1525,7 @@ body{
   
   
         .article_wrap{
-            margin-bottom: 55.5px;
+            margin-bottom: 58.5px;
             
             @include sp(){
                 margin-bottom: 45px;
@@ -1097,7 +1555,7 @@ body{
                     }
 
                     @include sp{
-                      padding: 21px 0px 21px;
+                      padding: 16.5px 0px 16.5px;
                   }
 
                 .date{
@@ -1112,7 +1570,7 @@ body{
                     }
   
                     @include sp{
-                        font-size: 14px;
+                        font-size: 13px;
                     }
   
                 }
@@ -1143,12 +1601,10 @@ body{
             margin: 0 auto;
   
             @include tab{
-                width: 250px;
             }
   
             @include sp{
                 margin: 0 auto;
-                width: 99%;
             }
   
             a{
@@ -1179,6 +1635,8 @@ body{
   }/*topic*/
 
 
+ 
+  
   footer{
     background-color: #515B5D;
 
@@ -1192,11 +1650,35 @@ body{
 
       @include pc{
         padding-right:20px;
-        padding-left: 20px;
+        padding-left: 0px;
       }
+
+      @include sp{
+        display: block;
+        padding-right:0px;
+        padding-left: 0px;
+        width: 300px;
+      }
+
+      @include sp{
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+
+
 
       .footer_nav{
         ul{
+
+          @include tab{
+            margin-left: 15px;
+          }
+
+          @include sp{
+            margin-top: 10px;
+          }
+
+        
           .nav_top_title{
             font-weight: bold;
             margin-bottom: 10px;
@@ -1219,6 +1701,7 @@ body{
               font-size: 14px;
               margin-top: 14px;
             }
+
           }/*top_title*/
 
           li{
@@ -1247,9 +1730,7 @@ body{
 
         }
       }
-
     }/*wrap*/
   }/*footer*/
-
 }/*body*/
 }

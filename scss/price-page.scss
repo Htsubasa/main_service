@@ -33,7 +33,7 @@ $sp-second: 425px;  // スマホ
 
   @mixin h2_title {
     border-radius: 12px;
-    background-image: url(../img/price/title.png);
+    background-image: url(../img/common/title_blue.png);
     background-position: center;
     background-size: 100%;
     color: #FFFFFF;
@@ -41,10 +41,31 @@ $sp-second: 425px;  // スマホ
     padding-left: 34px;
     height: 76px;
     line-height: 76px;
-    width: 880px;
+    max-width: 880px;
+    width: 100%s;
     margin: 0 auto;
     margin-bottom: 34px;
     margin-top: 82px;
+
+
+    @include tab{
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      font-size: 22px;
+      padding-left: 20px;
+      background-size: 100% 100%;
+    }
+
+    @include sp{
+      text-align: center;
+      margin-bottom: 20px;
+      padding-left: 0px;
+      height: 107px;
+      line-height: 107px;
+    }
+
+
 }
 
 html{
@@ -55,10 +76,18 @@ body{
 
   header{
     .header_wrap{
-      max-width: 1060px;
-      width: 100%;
+      max-width: 1500px;
+      width: 95%;
       margin: 0 auto;
       padding: 32px 0 31px ;
+
+      @include pc{
+        max-width: 1024px;
+        width: 95%;
+      }
+
+      @include sp{
+        padding: 14px 0 14px ;      }
 
       .header_block{
         display: flex;
@@ -66,15 +95,29 @@ body{
     
       .header_logo{
         display: flex;
+
         img{
           width: 70px;
         }/*img*/
 
         h1{
           font-size: 34px;
+
+          @include pc{
+            font-size: 30px;
+          }
+
+          @include sp{
+            font-size: 18px;
+          }
+
           .header_logo_sub{
             display: block;
             font-size: 15px;
+
+            @include sp{
+              font-size: 10px;
+            }
           }/*logo_sub*/
         }/*h1*/
       }/*logo*/
@@ -85,33 +128,61 @@ body{
         color: #6B7483;
         font-weight: bold;
 
+        @include tab{
+          display: none;
+        }
+
         .header_contact{
           text-align: center;
           padding-right: 24.4px;
           border-right: 1px solid #6B7483;
+          font-size: 18px;
+
+
+          @include pc{
+            padding-right: 12px;
+            font-size: 14px;
+          }
+  
         }
 
         .header_tel{
           padding-left: 25.6px;
           margin-right: 23px;
+          font-size: 20px;
 
-          p{
+          @include pc{
+            display: none;
+          }
+
+          .area{
+            font-size: 18px;
+
             
             span{
               margin-left: 12px;
               font-family: 'Oswald', sans-serif;
               font-weight: 500;
+              font-size: 20px;
+
               img{
-                width: 13px;
-              }
-            }
-          }
+                width: 19px;
+                height: 18px;
+                margin-right: 2px;
+              }/*img*/
+            }/*span*/
+          }/*area*/
 
         }
 
         .btn{
           width: 218px;
           margin: 0 auto;
+
+          @include pc{
+            margin-left: 10px;
+            width: 200px;
+          }
 
           @include tab{
               width: 250px;
@@ -151,11 +222,40 @@ body{
     .header_nav{
       margin-top: 39px;
 
+      @include tab{
+        display: none;
+        width: 350px;
+        height: 100%;
+        color: rgb(0, 0, 0);
+        height: 100vh;
+        background-color: #ffffff;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        margin-top: 0px;
+        transform: translateX(0); /* right0まで-250px移動 */
+
+      }
+
       ul{
         display: flex;
         justify-content: center;
 
-        li{
+        @include pc{
+          margin: 0 auto;
+          flex-wrap: wrap;
+          width: 650px;
+        }
+
+        @include tab{
+          display: inline-block;
+          padding-top: 80px;
+          padding-bottom: 80px;
+        }
+
+        .g-nav{
           border-right: 1px solid #222222;
           color: #222222;
           list-style: none;
@@ -163,36 +263,196 @@ body{
           -moz-transform: skewX(150deg);
           transform: skewX(150deg);
 
+          @include tab{
+            -webkit-transform: skewX(0deg);
+            -moz-transform: skewX(0deg);
+            transform: skewX(0deg); 
+            border-right: none;
+          }
+
           a{
             padding: 0 18px;
             display:block;
             transform: skewX(-150deg);
             font-size: 18px;
             font-weight: bold;
+            letter-spacing: 0.9px;
+
+
+          @include tab{
+            -webkit-transform: skewX(0deg);
+            -moz-transform: skewX(0deg);
+            transform: skewX(0deg); 
+          }
+
           }
 
         }/*li*/
+
+        li:last-child{
+          border-right: none;
+        }/*last-child*/
+
       }/*ul*/
     }/*nav*/
 
+
+  
+  .btn-gnavi{
+  
+    display: none;
+  
+    @include tab{
+      display: initial;
+        position: fixed;
+        top: 50px;
+        right: 4%;
+        width: 30px;
+        height: 24px;
+        z-index: 4;
+        cursor: pointer;
+        transition: all 400ms;
+        -webkit-transition:all 400ms;
+    }
+  
+    @include sp{
+      top: 30px;
+      right: 7%;
+    }
+  }
+  
+  
+  .btn-gnavi{
+    z-index: 1000;
+  
+    @include sp-second{
+    }
+
+    span{
+        @include tab{
+            position: absolute;
+            height: 3px;
+            -webkit-transition: all 400ms;
+            transition: all 400ms;
+            right: 0;
+          }
+  
+          @include sp-second{
+            width: 45px;
+          }
+    
+  }/*span*/
+  
+    span:nth-of-type(1){
+  
+        @include tab{
+            top: 0;
+            z-index: 1000;
+            width: 40px;
+            background-color: #ED974C;
+        }
+  
+        @include sp{
+          width: 21px;
+      }
+  
+    }/*span*/
+  
+    span:nth-of-type(2){
+  
+        @include tab{
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            background-color: #F7CD68;
+        }
+  
+        @include sp{
+          width: 21px;
+          top: 7px;
+      }
+  
+    }/*span*/
+  
+    span:nth-of-type(3){
+        @include tab{
+            top: 20px;
+            z-index: 1000;
+            width: 40px;
+            background-color: #71C1C0;
+        }
+  
+        @include sp{
+          width: 21px;
+          top: 14px;
+      }
+  
+    }/*span*/
+    
+  
+  }/*btn-gnavi*/
+  
+  
+  
+ .btn-gnavi.hb-open span:nth-of-type(1) {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
+    transition: 0.5s;
+
+    @include sp{
+      -webkit-transform: translateY(5px) rotate(-45deg);
+      transform: translateY(5px) rotate(-45deg);
+    }
+
+  }
+  .btn-gnavi.hb-open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .btn-gnavi.hb-open span:nth-of-type(3) {
+    -webkit-transform:translateY(-10px) rotate(230deg);
+    transform: translateY(-10px) rotate(45deg);
+    transition: 0.5s;
+    width: 40px;
+
+    @include sp{
+      width: 17px;
+      -webkit-transform:translateY(-5px) rotate(230deg);
+      transform: translateY(-5px) rotate(45deg);  
+    }
+  }
     }/*warp*/
   }/*header*/
 
+
+
   .mainvisual{
-    background-image: url(../img/service/mv-mainvisual.png);
-    background-size: contain;
+    background-image: url(../img/common/mainvisual-2.png);
+    background-size: cover;
     background-repeat: no-repeat;
     height: 45vw;
     width: 100%;
     position: relative;
 
+    @include sp(){
+      background-size: 100% 100%;
+      height: 395px;
+      background-image: url(../img/common/mainvisual-2_sp.png);
+    }
+
 
     &_wrap{
       background-image: url(../img/service/mv-background.png);
-      background-size: contain;  
+      background-size: cover;  
       background-repeat: no-repeat;
       height: 45vw;
       width: 100%;
+
+
+      @include sp(){
+        background-size: 100% 100%;
+        height: 395px;
+        background-image: url(../img/common/mv-background_sp.png);
+      }
 
       .mv_inner_text{
         background-color: #FFFFFF;
@@ -209,25 +469,66 @@ body{
         background-image: url(../img/common/border-colorful.png);
         background-position: center;
 
+        @include pc{
+          padding: 50px 0px;
+          max-width: 500px;
+          background-size: 480px 130px;
+        }
+
+        @include tab{
+          max-width: 450px;
+          width: 90%;
+          padding: 30px 0px;
+          background-size: 410px 90px;
+        }
+
+
+        @include sp{
+          max-width: 306px;
+          width: 90%;
+          padding: 75px 0px 79px;
+          background-size: 240px 170px;
+        }
+
+
         .top_inner_title{
           font-weight: 900;
           font-size: 42px;
-        }/*inner_title*/
 
+          @include pc{
+            font-size: 38px;
+          }
+
+          @include tab{
+            font-size: 27px;
+          }
+
+          @include sp{
+            font-size: 24px;
+          }
+        }/*inner_title*/
       }/*mv-inner-teext*/
     }
-
   }/*mainvisual*/
-
-
 
 
   .intro_top{
     margin-top: 136px;
     margin-bottom: 120px;
+
+    @include tab{
+      margin-top: 80px;
+      margin-bottom: 70px;  
+    }
+
+    @include sp{
+      margin-top: 50px;
+      margin-bottom: 50px;  
+    }
   
     .intro_wrap{
         text-align: center;
+
         .top_text{
             font-size: 25px;
             color: #6B7483;
@@ -235,6 +536,22 @@ body{
             font-weight: bold;
             letter-spacing: 0.625px;
             margin-bottom: 98px;
+
+            @include pc(){
+              font-size: 22px;
+            }
+
+            @include tab{
+              font-size: 18px;
+              width: 90%;
+              margin: 0 auto;
+            }
+
+            @include sp{
+              font-size: 16px;
+            }
+
+
         }/*text*/
     }/*wrap*/
   }/*introtop*/
@@ -242,33 +559,83 @@ body{
 
 
   .content{
-      margin-top: 85px;
+    margin-top: 85px;
+    margin-right: 40px;
+    margin-left: 40px;
 
-      &_box{
-          max-width: 1200px;
-          width: 100%;
-          margin:  0 auto;
-          padding: 94px 160px 134px 160px;
-          box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.16);
-          border-radius: 41px;
-  
+    @include tab{
+      margin-right: 25px;
+      margin-left: 25px;  
+    }
+
+    @include sp{
+      margin-top: 35px; 
+      margin-right: 15px;
+      margin-left: 15px;  
+    }
+
+    &_box{
+        max-width: 1200px;
+        width: 100%;
+        margin:  0 auto;
+        padding: 94px 160px 134px 160px;
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.16);
+        border-radius: 41px;
+
+        @include pc{
+          padding: 94px 50px 134px 50px;
+        }/*pc*/
+
+        @include tab{
+          padding: 67px 30px 70px 30px;
+        }/*pc*/
+
+        @include sp-second(){
+          padding: 67px 18px 70px 18px;
+        }/*pc*/
 
           h2{
               @include h2_title;
-
           }/*h2*/
+
+          #first_title{
+            margin-top: 0px;
+          }
 
           .bubble_part{
             display: flex;
             margin-bottom: 53.9px;
             justify-content: space-between;
 
+            @include tab{
+              display: block;
+            }
+
             p{
                 width: 520px;
+                @include tab{
+                  width: 100%;
+                }
             }
 
             img{
                 margin-right: 30px;
+                margin-left: 20px;
+                width: 277px;
+                height: 164px;
+
+                @include tab{
+                  margin-left: auto;
+                  display: flex;
+                  margin-top: 20px;
+                }
+
+                @include sp(){
+                  width: 277px;
+                  height: 164px;
+                }
+
+
             }/*img*/
         }
 
@@ -282,8 +649,35 @@ body{
             align-items: center;
             justify-content: space-between;
 
+            @include sp{
+              flex-wrap: wrap;
+              padding: 25px 18px 22.5px 18px;
+            }
+
             p{
                 width: 416px;
+                margin-left: 30px;
+
+                @include sp{
+                  width: 100%;
+                  margin-left: 0px;
+                }
+            }
+
+            img{
+              width: 200px;
+
+              @include sp{
+                width: 283px;
+                height: 158px;
+                margin-bottom: 25px;
+              }
+
+              @include sp-second(){
+                width: 100%;
+                height: auto;
+              }
+
             }
         }
 
@@ -298,6 +692,19 @@ body{
                 font-weight: bold;
                 border-radius: 8px;
                 letter-spacing: 4.3px;
+
+                @include tab{
+                  font-size: 18px;
+                }
+
+                @include sp{
+                  font-size: 23px;
+                  padding-top: 17px;
+                  padding-bottom: 17px;  
+                }
+
+           
+
             }
 
             .blue_box{
@@ -320,6 +727,10 @@ body{
                 height: 40px;
                 margin-bottom: 19px;
                 margin-top: 4px;
+
+                @include sp{
+                  margin-bottom: 10px;
+                }
             }
 
         }/*proceed*/
@@ -333,6 +744,12 @@ body{
                     list-style: none;
                     font-size: 16px;
                     line-height: 1.8;
+                    margin-bottom: 15px;
+
+                    @include tab{
+                      margin-bottom: 10px;
+                    }
+
                 }/*li*/
 
 
@@ -354,6 +771,15 @@ body{
               border-spacing: 13px 4px;
               margin-top: 54px;
 
+              @include tab{
+                border-spacing: 6px 4px;
+              }
+
+
+              @include sp{
+                border-spacing: 3px 3px;
+              }
+
               .top_table{
                   height: 61px;
               }
@@ -365,6 +791,11 @@ body{
                     background-color: #6CCBC8;
                     color: white;
                     font-size: 20px;
+
+                    @include sp{
+                      font-size: 7px;
+                    }
+
                 }/*list*/
 
                 .price_list{
@@ -372,6 +803,9 @@ body{
                     color: white;
                     font-size: 20px;
 
+                    @include sp{
+                      font-size: 7px;
+                    }
                 }
 
                   th{
@@ -385,10 +819,29 @@ body{
                       line-height: 1.8;
                       letter-spacing: 2.6px;
 
+                      @include tab{
+                        font-size: 24px;
+                      }
+
+
+                      @include sp{
+                        font-size: 13px;
+                      }
+
+
                       .sub_category{
                           display: block;
                           font-size: 18px;
                           letter-spacing: 2.6px;
+
+                          @include tab{
+                            font-size: 14px;
+                          }
+
+                          @include sp{
+                            font-size: 8px;
+                          }
+
                       }/*subb-category*/
                   }
 
@@ -398,6 +851,16 @@ body{
                     width: 35%;
                     text-align: center;
                     font-weight: bold;
+
+                    @include tab{
+                      font-size: 20px;
+                    }
+
+
+                    @include sp{
+                      font-size: 8px;
+                    }
+
                 }
               }/*tr*/
           }/*company_table*/
@@ -406,7 +869,10 @@ body{
               line-height: 1.875;
               letter-spacing: 0.4px;
               font-size: 16px;
+
+
           }/*text*/
+
 
           .group_table{
               display: flex;
@@ -461,36 +927,70 @@ body{
             }/*list*/
 
           }/*group_table*/
-
-        
-
-
       }/*box*/
   }/*content*/
 
 
-.contact_wrap{
+
+  .contact_wrap{
     margin-bottom: 94px;
     margin-top: 109px;
+
+    @include sp{
+      margin-bottom: 70px;
+      margin-top: 90px;
+      text-align: center;
+    }
 
     .contact_title{
       font-size: 26px;
       margin-bottom: 36px;
       text-align: center;
+
+      @include tab{
+        font-size: 22px;
+      }/*tab*/
+
+      @include sp{
+        display: none;
+      }
+
+
     }
+
+    .contact_title_sp{
+      display: none;
+
+      @include sp{
+        display: block;
+        font-size: 20px;
+        margin-bottom: 16px;
+        width: 100%;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+
+    }
+
 
     .btn{
         width: 708px;
         margin: 0 auto;
         height: 82px;
+  
 
         @include tab{
-            width: 250px;
+          max-width: 700px;
+          width: 85%;
+          height: auto;
         }
 
         @include sp{
-            margin: 0 auto;
-            width: 99%;
+          width: 92.5%;
+          margin: 0 auto;
+        }
+
+        @include sp-second(){
         }
 
         a{
@@ -506,11 +1006,20 @@ body{
             line-height: 82px;
             height: 82px;
 
-            
-            @include sp{
-                padding: 20px 0px;
+            @include tab{
+              font-size: 22px;
+              height: 75px;
+              line-height: 75px;
             }
 
+            @include sp{
+              font-size: 20px;
+              height: 67px;
+              line-height: 67px;
+            }
+
+      
+         
         }/*a*/
     }/*btn*/
 
@@ -525,6 +1034,12 @@ body{
         font-weight: bold;
         font-size: 18px;
         letter-spacing: 0.45px;
+
+        @include sp{
+          font-size: 16px;
+          margin-top: 18px;
+          margin-bottom: 21px;
+        }
     }
 
     .contact_tel{
@@ -534,11 +1049,22 @@ body{
         justify-content: center;
         margin-top: 13px;
 
+        @include sp{
+          display: block;
+          margin-right: 0px;
+          text-align: center;
+          padding-left: 0px;
+        }
+
         p{
             color: #F79E46;
             letter-spacing: 2.6px;
             font-weight: bold;
             font-size: 26px;
+
+            @include tab{
+              font-size: 26px;
+            }
 
           .number{
             margin-left: 12px;
@@ -548,10 +1074,26 @@ body{
             align-items: center;
             font-size: 28px;
 
+
+            @include tab{
+              font-size: 22px;
+            }
+            @include sp{
+              font-size: 28px;
+            }
+
             img{
               width: 18px;
               margin-left: 17.4px;
               margin-right: 4px;
+
+              @include tab{
+                margin-left: 8px;
+                margin-right: 4px;
+                width: 14px;
+                }
+
+
             }/*img*/
 
           }/*span*/
@@ -560,15 +1102,35 @@ body{
 
       #shinjuku{
           margin-right: 18px;
-      }
+
+
+          @include tab{
+            margin-right: 12px;
+          }
+
+          @include sp{
+            margin-right: 0px;
+          }
+      }/*shinjuku*/
 
       #yokohama{
         margin-left: 18px;
-    }
+
+        @include tab{
+          margin-right: 12px;
+        }
+
+        @include sp{
+          margin: 0 auto;
+        }
+
+
+    }/*yokohama*/
 
 
 
 }/*contact_wrap*/
+
 
 
   
@@ -585,11 +1147,35 @@ body{
 
       @include pc{
         padding-right:20px;
-        padding-left: 20px;
+        padding-left: 0px;
       }
+
+      @include sp{
+        display: block;
+        padding-right:0px;
+        padding-left: 0px;
+        width: 300px;
+      }
+
+      @include sp{
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+
+
 
       .footer_nav{
         ul{
+
+          @include tab{
+            margin-left: 15px;
+          }
+
+          @include sp{
+            margin-top: 10px;
+          }
+
+        
           .nav_top_title{
             font-weight: bold;
             margin-bottom: 10px;
@@ -612,6 +1198,7 @@ body{
               font-size: 14px;
               margin-top: 14px;
             }
+
           }/*top_title*/
 
           li{
@@ -640,9 +1227,7 @@ body{
 
         }
       }
-
     }/*wrap*/
   }/*footer*/
-
 }/*body*/
 }
