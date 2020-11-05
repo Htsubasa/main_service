@@ -1272,6 +1272,7 @@ html body .content_box .concept .concept_title {
   color: #F79E46;
   text-align: center;
   margin-bottom: 33px;
+  font-weight: 900;
 }
 
 @media (max-width: 768px) {
@@ -1352,6 +1353,7 @@ html body .content_box .curriculum .curriculum_sub_title {
   font-size: 26px;
   text-align: center;
   margin-bottom: 28px;
+  font-weight: 900;
 }
 
 @media (max-width: 768px) {
