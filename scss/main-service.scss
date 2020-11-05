@@ -63,6 +63,14 @@ $sp-second: 425px;  // スマホ
       height: auto;
       line-height: 30px;
       padding: 21px 0px 24px 0px;
+      background-image: url(../img/common/h2_sp.png);
+    }
+
+    .br_sp{
+      display: none;
+      @include sp{
+        display: block;
+      }
     }
 }
 
@@ -435,7 +443,7 @@ body{
     @include sp(){
       background-size: 100% 100%;
       height: 395px;
-      background-image: url(../img/service/mainvisual3_sp.png);
+      background-image: url(../img/common/mainservice_mv_sp.png);
     }
 
 
@@ -471,23 +479,16 @@ body{
         @include pc{
           padding: 50px 0px;
           max-width: 500px;
-          background-size: 480px 130px;
+          background-size: 480px 170px;
         }
-
-        @include tab{
-          max-width: 450px;
-          width: 90%;
-          padding: 30px 0px;
-          background-size: 410px 90px;
-        }
-
 
         @include sp{
           max-width: 306px;
           width: 90%;
-          padding: 75px 0px 79px;
-          background-size: 240px 170px;
+          padding: 42px 0px 41px;
+          background-size: 240px 160px;
         }
+
 
         .top_inner_text{
           font-size: 27px;
@@ -506,6 +507,10 @@ body{
           font-weight: 900;
           font-size: 42px;
 
+          @include pc{
+            font-size: 32px;
+          }
+
           @include tab{
             font-size: 30px;
           }
@@ -514,6 +519,12 @@ body{
             font-size: 24px;
           }
 
+          .br_sp{
+            display: none;
+            @include sp{
+              display: block;
+            }
+          }
 
         }/*inner_title*/
 
@@ -750,7 +761,7 @@ body{
                     margin-right: 10px;
                     margin-left: 0px;
                     height: 280px;
-                    width: 79px;
+                    width: 103px;
                     display: flex;
                   }
 
@@ -838,6 +849,8 @@ body{
 
               @include sp{
                 font-size: 22px;
+                margin-bottom: 25px;
+                margin-top: 32px;
               }
 
             }/*title*/
@@ -894,6 +907,7 @@ body{
 
                   @include pc{
                     font-size: 14px;
+                    text-align: left;
                   }
               }
 
@@ -1981,6 +1995,7 @@ body{
                 @include tab{
                   padding-bottom: 20px;
                 }
+
               }
 
               .consulting_flow_pic_sp{
@@ -2029,6 +2044,7 @@ body{
                 background-color: #EAEEEF;
                 padding: 30px 36px;
                 margin-top: 21px;
+                border-radius: 7px;
 
                 @include tab{
                   padding: 30px 16px;
@@ -2048,9 +2064,19 @@ body{
 
             }/*box*/
 
-            img{
+            .consulting_img_pc{
               @include tab{
                 display: none;
+              }
+            }
+
+            .consulting_img_sp{
+              display: none;
+
+              @include tab{
+                display: block;
+                margin: 0 auto;
+                margin-top: 27px;
               }
             }
 
@@ -2058,6 +2084,10 @@ body{
 
           .point_wrap{
             margin-bottom: 109px;
+
+            @include sp{
+              margin-bottom: 80px;
+            }
 
               .point_content{
                   display: flex;
@@ -2119,20 +2149,10 @@ body{
                               transform: translateY(-50%);
                               text-align:center;    
                               font-size: 15px;    
-                           
-                            @include sp{
-                            }
-
-
                                           
                               span{
                                   display: block;
                                   font-size: 18px;  
-
-
-                            @include sp{
-                              font-size: 15px;  
-                            }
 
                               }/*span*/
 
@@ -2297,11 +2317,6 @@ body{
                         color: #F79E46;
                         margin-top: 42px;
                         letter-spacing: 2px;
-
-                        @include sp{
-                          font-size: 16px;
-                        }
-
                     }
 
                     .proceed_text{
@@ -2332,6 +2347,8 @@ body{
 
         .customer_list{
             h2{
+
+
 
             }/*h2*/
 
@@ -2385,8 +2402,8 @@ body{
                 }
 
                 @include sp{
-                  width: 30%;
-                  height: 20%;
+                  width: 132px;
+                  height: 132px;
                 }
 
                 }
@@ -2400,6 +2417,7 @@ body{
                         font-size: 17px;
                         line-height: 1.88;
                         vertical-align: bottom;
+                        letter-spacing: 0.425px;
 
                         @include tab{
                           font-size: 15px;
@@ -2448,8 +2466,8 @@ body{
     margin-top: 109px;
 
     @include sp{
-      margin-bottom: 70px;
-      margin-top: 90px;
+      margin-bottom: 100px;
+      margin-top: 66px;
       text-align: center;
     }
 
