@@ -73,6 +73,8 @@ html{
 body{
   font-family: 'Noto Sans JP', sans-serif;
 
+.no-scroll{
+  overflow: hidden;
 
   header{
     .header_wrap{
@@ -988,7 +990,53 @@ body{
                         padding: 96px 0 90px 0px;
                         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                         z-index: 2;
+                        overflow: auto;
+                        max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
 
+                        @include pc{
+                          width: 730px;
+                        }
+    
+                        @include tab{
+                          width: 80%;
+                        }
+    
+                        @include sp{
+                          padding: 40px 0 40px 0px;
+                        }
+    
+                        
+
+                        .dli-close {
+                          display: inline-block;
+                          vertical-align: middle;
+                          color: white;
+                          line-height: 1;
+                          width: 2em;
+                          height: 0.1em;
+                          background: currentColor;
+                          border-radius: 0.1em;
+                          position: relative;
+                          transform: rotate(45deg);
+                          position: absolute;
+                          top: -30px;
+                          right: 20px;
+                          cursor: pointer;
+                        }
+                        
+                        .dli-close::before {
+                          content: '';
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background: inherit;
+                          border-radius: inherit;
+                          transform: rotate(90deg);
+                        }
+
+                        
                         img{
                           display: flex;
                           margin:  0 auto;
@@ -1005,20 +1053,19 @@ body{
                           margin-bottom: 44px;
                     
                   
+                          @include pc{
+                            width: 500px;
+                          
+                          }
+    
                           @include tab{
-                            max-width: 700px;
-                            width: 85%;
-                            height: auto;
+                            width: 80%;
                           }
-                  
+    
                           @include sp{
-                            width: 92.5%;
-                            margin: 0 auto;
+                            width: 90%;
                           }
-                  
-                          @include sp-second(){
-                          }
-                  
+                         
                           p{
                               display: block;
                               text-align: center;
@@ -1054,6 +1101,12 @@ body{
                         margin: 0 auto;
                         line-height: 2.1;
                         letter-spacing: 1.6px;
+
+
+                      @include tab{
+                        width: 70%;
+                      }
+
                       }
 
                       .modal_title{
@@ -1084,7 +1137,22 @@ body{
                       padding: 96px 0 90px 0px;
                       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                       z-index: 2;
+                      max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
+                      overflow: auto;
 
+                      @include pc{
+                        width: 730px;
+                      }
+  
+                      @include tab{
+                        width: 80%;
+                      }
+  
+                      @include sp{
+                        padding: 40px 0 40px 0px;
+                      }
+                     
+                     
 
 
                       .dli-close {
@@ -1132,20 +1200,19 @@ body{
                         height: 82px;
                         margin-bottom: 44px;
                   
-                
+                        @include pc{
+                          width: 500px;
+                        
+                        }
+  
                         @include tab{
-                          max-width: 700px;
-                          width: 85%;
-                          height: auto;
+                          width: 80%;
                         }
-                
+  
                         @include sp{
-                          width: 92.5%;
-                          margin: 0 auto;
+                          width: 90%;
                         }
-                
-                        @include sp-second(){
-                        }
+                       
                 
                         p{
                             display: block;
@@ -1182,6 +1249,13 @@ body{
                       margin: 0 auto;
                       line-height: 2.1;
                       letter-spacing: 1.6px;
+
+
+                      @include tab{
+                        width: 70%;
+                      }
+
+
                     }
 
                    
@@ -1200,6 +1274,21 @@ body{
                     padding: 96px 0 0px 0px;
                     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                     z-index: 2;
+                    max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
+                    overflow: auto;
+
+                    
+                    @include pc{
+                      width: 730px;
+                    }
+
+                    @include tab{
+                      width: 80%;
+                    }
+
+                    @include sp{
+                      padding: 40px 0 40px 0px;
+                    }
 
                     
 
@@ -1248,20 +1337,20 @@ body{
                       height: 82px;
                       margin-bottom: 44px;
                 
-              
+                                 
+                      @include pc{
+                        width: 500px;
+                      
+                      }
+
                       @include tab{
-                        max-width: 700px;
-                        width: 85%;
-                        height: auto;
+                        width: 80%;
                       }
-              
+
                       @include sp{
-                        width: 92.5%;
-                        margin: 0 auto;
+                        width: 90%;
                       }
-              
-                      @include sp-second(){
-                      }
+                     
               
                       p{
                           display: block;
@@ -1298,10 +1387,14 @@ body{
                     margin: 0 auto;
                     line-height: 2.1;
                     letter-spacing: 1.6px;
+
+                      @include tab{
+                        width: 70%;
+                      }
                   }
 
-               
 
+               
                 }
                     
 
@@ -1386,6 +1479,22 @@ body{
                       padding: 96px 0 90px 0px;
                       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                       z-index: 2;
+                      max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
+                      overflow: auto;
+
+                      @include pc{
+                        width: 730px;
+                      }
+
+                      @include tab{
+                        width: 80%;
+                      }
+
+                      @include sp{
+                        padding: 40px 0 40px 0px;
+                      }
+                     
+                     
                      
                   
 
@@ -1432,21 +1541,21 @@ body{
                         margin: 0 auto;
                         height: 82px;
                         margin-bottom: 44px;
-                  
-                
-                        @include tab{
-                          max-width: 700px;
-                          width: 85%;
-                          height: auto;
-                        }
-                
-                        @include sp{
-                          width: 92.5%;
-                          margin: 0 auto;
-                        }
-                
-                        @include sp-second(){
-                        }
+                                    
+                      @include pc{
+                        width: 500px;
+                      
+                      }
+
+                      @include tab{
+                        width: 80%;
+                      }
+
+                      @include sp{
+                        width: 90%;
+                      }
+                     
+                     
                 
                         p{
                             display: block;
@@ -1468,7 +1577,7 @@ body{
                             }
                 
                             @include sp{
-                              font-size: 20px;
+                              font-size: 18px;
                               height: 67px;
                               line-height: 67px;
                             }
@@ -1483,6 +1592,12 @@ body{
                       margin: 0 auto;
                       line-height: 2.1;
                       letter-spacing: 1.6px;
+
+                      @include tab{
+                        width: 70%;
+                      }
+                     
+
                     }
   
                     .modal_title{
@@ -1513,7 +1628,52 @@ body{
                     padding: 96px 0 90px 0px;
                     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                     z-index: 2;
+                    max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
+                    overflow: auto;
 
+
+                    @include pc{
+                      width: 730px;
+                    }
+
+                    @include tab{
+                      width: 80%;
+                    }
+
+                    @include sp{
+                      padding: 40px 0 40px 0px;
+                    }
+                   
+                   
+
+                    .dli-close {
+                      display: inline-block;
+                      vertical-align: middle;
+                      color: white;
+                      line-height: 1;
+                      width: 2em;
+                      height: 0.1em;
+                      background: currentColor;
+                      border-radius: 0.1em;
+                      position: relative;
+                      transform: rotate(45deg);
+                      position: absolute;
+                      top: -30px;
+                      right: 20px;
+                      cursor: pointer;
+                    }
+                    
+                    .dli-close::before {
+                      content: '';
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background: inherit;
+                      border-radius: inherit;
+                      transform: rotate(90deg);
+                    }
 
                     img{
                       display: flex;
@@ -1531,19 +1691,19 @@ body{
                       margin-bottom: 44px;
                 
               
+                      @include pc{
+                        width: 500px;
+                      
+                      }
+
                       @include tab{
-                        max-width: 700px;
-                        width: 85%;
-                        height: auto;
+                        width: 80%;
                       }
-              
+
                       @include sp{
-                        width: 92.5%;
-                        margin: 0 auto;
+                        width: 90%;
                       }
-              
-                      @include sp-second(){
-                      }
+                     
               
                       p{
                           display: block;
@@ -1580,6 +1740,11 @@ body{
                     margin: 0 auto;
                     line-height: 2.1;
                     letter-spacing: 1.6px;
+
+                    @include tab{
+                      width: 70%;
+                    }
+                   
                   }
 
                   .modal_title{
@@ -2435,6 +2600,8 @@ body{
     background-color: rgba(107, 116, 131, 0.28);
     z-index: 1;
     display: none;
+}
+
 }
 
 }/*body*/
