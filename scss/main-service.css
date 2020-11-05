@@ -1411,6 +1411,7 @@ html body .no-scroll .content_box .curriculum .flow .program {
   max-width: 784px;
   margin: 0 auto;
   /*item*/
+  /*modal*/
 }
 
 @media (max-width: 1024px) {
@@ -1462,37 +1463,6 @@ html body .no-scroll .content_box .curriculum .flow .program .program_item .prog
   line-height: 1.6;
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .dli-close {
-  display: inline-block;
-  vertical-align: middle;
-  color: white;
-  line-height: 1;
-  width: 2em;
-  height: 0.1em;
-  background: currentColor;
-  border-radius: 0.1em;
-  position: relative;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  top: -30px;
-  right: 20px;
-  cursor: pointer;
-}
-
-html body .no-scroll .content_box .curriculum .flow .program .dli-close::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: inherit;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
   position: fixed;
   top: 50%;
@@ -1504,14 +1474,12 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
   display: none;
   width: 1200px;
   border-radius: 41px;
-  padding: 96px 0 90px 0px;
+  padding: 96px 0 0px 0px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 2;
-  overflow: auto;
   max-height: calc(100vh - 120px);
   /* 「350px」のところはお好みの値でOK */
-  /*btn*/
 }
 
 @media (max-width: 1024px) {
@@ -1532,7 +1500,64 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 img {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .dli-close {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  line-height: 1;
+  width: 2em;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 0.1em;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: -30px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .dli-close::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+  overflow: auto;
+  height: 500px;
+  /*btn*/
+}
+
+@media (max-width: 1024px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+    width: 730px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+    width: 80%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+    padding: 40px 0 40px 0px;
+  }
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1543,12 +1568,12 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 img {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap img {
     width: 70%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
   width: 708px;
   margin: 0 auto;
   height: 82px;
@@ -1557,24 +1582,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn p {
   display: block;
   text-align: center;
   font-size: 24px;
@@ -1589,7 +1614,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn p {
     font-size: 22px;
     height: 75px;
     line-height: 75px;
@@ -1597,7 +1622,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn p {
     font-size: 18px;
     height: 67px;
     line-height: 67px;
@@ -1605,7 +1630,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_text {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_text {
   width: 648px;
   margin: 0 auto;
   line-height: 2.1;
@@ -1613,12 +1638,12 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_tex
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_text {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_text {
     width: 85%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_title {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_title {
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 0.65px;
@@ -1629,17 +1654,17 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_tit
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_title {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_title {
     font-size: 20px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_bottom_text {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_bottom_text {
   text-align: center;
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_bottom_text {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_bottom_text {
     width: 85%;
     margin: 0 auto;
   }
@@ -1660,10 +1685,9 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 {
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 2;
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh -120px);
   /* 「350px」のところはお好みの値でOK */
-  overflow: auto;
-  /*btn*/
+  /*wrap*/
 }
 
 @media (max-width: 1024px) {
@@ -1715,7 +1739,19 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .dli-close
           transform: rotate(90deg);
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_2 img {
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap {
+  overflow: auto;
+  height: 500px;
+  /*btn*/
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap {
+    width: 400px;
+  }
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1723,21 +1759,22 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 img {
   width: 640px;
   height: auto;
   margin-top: 59px;
+  overflow: scroll;
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap img {
     width: 70%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap img {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
   width: 708px;
   margin: 0 auto;
   height: 82px;
@@ -1746,24 +1783,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn p {
   display: block;
   text-align: center;
   font-size: 24px;
@@ -1778,7 +1815,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn p {
     font-size: 22px;
     height: 75px;
     line-height: 75px;
@@ -1786,14 +1823,14 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn p {
     font-size: 20px;
     height: 67px;
     line-height: 67px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_text {
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .modal_text {
   width: 648px;
   margin: 0 auto;
   line-height: 2.1;
@@ -1801,7 +1838,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_tex
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_text {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .modal_text {
     width: 85%;
   }
 }
@@ -1823,8 +1860,6 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 {
   z-index: 2;
   max-height: calc(100vh - 120px);
   /* 「350px」のところはお好みの値でOK */
-  overflow: auto;
-  /*btn*/
 }
 
 @media (max-width: 1024px) {
@@ -1876,7 +1911,19 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .dli-close
           transform: rotate(90deg);
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap {
+  overflow: auto;
+  height: 500px;
+  /*btn*/
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap {
+    width: 400px;
+  }
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1887,24 +1934,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap img {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap img {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap img {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
   width: 708px;
   margin: 0 auto;
   height: 82px;
@@ -1913,24 +1960,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn p {
   display: block;
   text-align: center;
   font-size: 24px;
@@ -1945,7 +1992,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn p {
     font-size: 22px;
     height: 75px;
     line-height: 75px;
@@ -1953,14 +2000,14 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn p {
     font-size: 20px;
     height: 67px;
     line-height: 67px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_text {
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .modal_text {
   width: 648px;
   margin: 0 auto;
   line-height: 2.1;
@@ -1968,7 +2015,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_tex
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_text {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .modal_text {
     width: 85%;
   }
 }
@@ -2250,8 +2297,6 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 {
   z-index: 2;
   max-height: calc(100vh - 120px);
   /* 「350px」のところはお好みの値でOK */
-  overflow: auto;
-  /*btn*/
 }
 
 @media (max-width: 1024px) {
@@ -2303,7 +2348,19 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .dl
           transform: rotate(90deg);
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap {
+  overflow: auto;
+  height: 500px;
+  /*btn*/
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap {
+    width: 400px;
+  }
+}
+
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2314,24 +2371,24 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap img {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap img {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap img {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
   width: 708px;
   margin: 0 auto;
   height: 82px;
@@ -2340,24 +2397,24 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .bt
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn p {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn p {
   display: block;
   text-align: center;
   font-size: 24px;
@@ -2372,7 +2429,7 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .bt
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn p {
     font-size: 22px;
     height: 75px;
     line-height: 75px;
@@ -2380,14 +2437,14 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .bt
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn p {
     font-size: 20px;
     height: 67px;
     line-height: 67px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_text {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_text {
   width: 648px;
   margin: 0 auto;
   line-height: 2.1;
@@ -2395,12 +2452,12 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .mo
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_text {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_text {
     width: 85%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_title {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_title {
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 0.65px;
@@ -2411,17 +2468,17 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .mo
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_title {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_title {
     font-size: 20px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_bottom_text {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_bottom_text {
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_bottom_text {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_bottom_text {
     width: 85%;
     margin: 0 auto;
   }
@@ -3245,9 +3302,9 @@ html body .no-scroll footer {
 }
 
 html body .no-scroll footer .footer_wrap {
-  padding-top: 94px;
-  padding-bottom: 90px;
-  max-width: 992px;
+  padding-top: 106px;
+  padding-bottom: 113px;
+  max-width: 846px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3282,7 +3339,6 @@ html body .no-scroll footer .footer_wrap {
 
 html body .no-scroll footer .footer_wrap .footer_nav ul {
   /*top_title*/
-  /*top_title*/
   /*navlist*/
 }
 
@@ -3308,20 +3364,6 @@ html body .no-scroll footer .footer_wrap .footer_nav ul .nav_top_title {
 @media (max-width: 1024px) {
   html body .no-scroll footer .footer_wrap .footer_nav ul .nav_top_title {
     font-size: 16px;
-  }
-}
-
-html body .no-scroll footer .footer_wrap .footer_nav ul .nav_title {
-  font-weight: bold;
-  margin-top: 19px;
-  font-size: 18px;
-  letter-spacing: 0.45px;
-}
-
-@media (max-width: 1024px) {
-  html body .no-scroll footer .footer_wrap .footer_nav ul .nav_title {
-    font-size: 14px;
-    margin-top: 14px;
   }
 }
 
