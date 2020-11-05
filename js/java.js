@@ -3,24 +3,17 @@ $(function(){
   $('.btn-gnavi').on('click',function(){
     var rightVal = 0;
     if($(this).hasClass('hb-open')){
-      rightVal = 0;
+      rightVal = -300;
       $(this).removeClass('hb-open');
     }else{
       $(this).addClass('hb-open');
     }
+
+    $('.header_nav').stop().animate({
+      right: rightVal
+    }, 200);
   });
 });
-
-$(function(){
-	$(".btn-gnavi").click(function(){
-		$(".header_nav").slideToggle(400);
-	});
-	$(".header_nav li a").click(function(){
-		$(".btn-gnavi").css({display:"none"});
-	});
-});
-
-
 
 $(function () {
   var headerHight = 200; //ヘッダの高さ
