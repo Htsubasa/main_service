@@ -831,6 +831,7 @@ body{
               color: #F79E46;
               text-align: center;
               margin-bottom: 33px;
+              font-weight: 900;
 
               @include tab{
                 font-size: 24px;
@@ -879,6 +880,7 @@ body{
             }
 
           }/*concept*/
+ 
 
           .curriculum{
               .curriculum_text{
@@ -898,6 +900,7 @@ body{
                 font-size: 26px;
                 text-align: center;
                 margin-bottom: 28px;
+                font-weight: 900;
 
                 @include tab{
                   font-size: 24px;
@@ -963,6 +966,7 @@ body{
                               width: 156px;
                               border-radius: 50%;
                               box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                              cursor: pointer;
                           }
                           .program_text{
                               font-size: 14px;
@@ -970,6 +974,336 @@ body{
                           }
 
                       }/*item*/
+
+                      .modal_1{
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 300px;
+                        background-color: #FFFFFF;
+                        display: none;
+                        width: 1200px;
+                        border-radius: 41px;
+                        padding: 96px 0 90px 0px;
+                        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                        z-index: 2;
+
+                        img{
+                          display: flex;
+                          margin:  0 auto;
+                          width: 640px;
+                          height: auto;
+                          margin-top: 59px;
+                        }
+
+
+                        .btn{
+                          width: 708px;
+                          margin: 0 auto;
+                          height: 82px;
+                          margin-bottom: 44px;
+                    
+                  
+                          @include tab{
+                            max-width: 700px;
+                            width: 85%;
+                            height: auto;
+                          }
+                  
+                          @include sp{
+                            width: 92.5%;
+                            margin: 0 auto;
+                          }
+                  
+                          @include sp-second(){
+                          }
+                  
+                          p{
+                              display: block;
+                              text-align: center;
+                              font-size: 24px;
+                              line-height: 17px;
+                              color: white;
+                              background-color: #6CCBC8;
+                              border-radius: 41px;  
+                              font-weight: bold; 
+                              letter-spacing: 1.2px;
+                              line-height: 82px;
+                              height: 82px;
+                  
+                              @include tab{
+                                font-size: 22px;
+                                height: 75px;
+                                line-height: 75px;
+                              }
+                  
+                              @include sp{
+                                font-size: 20px;
+                                height: 67px;
+                                line-height: 67px;
+                              }
+                  
+                        
+                           
+                          }/*a*/
+                      }/*btn*/
+
+                      .modal_text{
+                        width: 648px;
+                        margin: 0 auto;
+                        line-height: 2.1;
+                        letter-spacing: 1.6px;
+                      }
+
+                      .modal_title{
+                        font-size: 26px;
+                        font-weight: bold;
+                        letter-spacing: 0.65px;
+                        color: #6CCBC8;
+                        text-align: center;
+                        margin-bottom: 14px;
+                        margin-top: 35px;
+                      }
+                      .modal_bottom_text{
+                        text-align: center;
+                      }
+
+                    }
+
+                    .modal_2{
+                      position: fixed;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      width: 300px;
+                      background-color: #FFFFFF;
+                      display: none;
+                      width: 1200px;
+                      border-radius: 41px;
+                      padding: 96px 0 90px 0px;
+                      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                      z-index: 2;
+
+
+
+                      .dli-close {
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: white;
+                        line-height: 1;
+                        width: 2em;
+                        height: 0.1em;
+                        background: currentColor;
+                        border-radius: 0.1em;
+                        position: relative;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: -30px;
+                        right: 20px;
+                        cursor: pointer;
+                      }
+                      
+                      .dli-close::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: inherit;
+                        border-radius: inherit;
+                        transform: rotate(90deg);
+                      }
+  
+
+                      img{
+                        display: flex;
+                        margin:  0 auto;
+                        width: 640px;
+                        height: auto;
+                        margin-top: 59px;
+                      }
+
+
+                      .btn{
+                        width: 708px;
+                        margin: 0 auto;
+                        height: 82px;
+                        margin-bottom: 44px;
+                  
+                
+                        @include tab{
+                          max-width: 700px;
+                          width: 85%;
+                          height: auto;
+                        }
+                
+                        @include sp{
+                          width: 92.5%;
+                          margin: 0 auto;
+                        }
+                
+                        @include sp-second(){
+                        }
+                
+                        p{
+                            display: block;
+                            text-align: center;
+                            font-size: 24px;
+                            line-height: 17px;
+                            color: white;
+                            background-color: #6CCBC8;
+                            border-radius: 41px;  
+                            font-weight: bold; 
+                            letter-spacing: 1.2px;
+                            line-height: 82px;
+                            height: 82px;
+                
+                            @include tab{
+                              font-size: 22px;
+                              height: 75px;
+                              line-height: 75px;
+                            }
+                
+                            @include sp{
+                              font-size: 20px;
+                              height: 67px;
+                              line-height: 67px;
+                            }
+                
+                      
+                         
+                        }/*a*/
+                    }/*btn*/
+
+                    .modal_text{
+                      width: 648px;
+                      margin: 0 auto;
+                      line-height: 2.1;
+                      letter-spacing: 1.6px;
+                    }
+
+                   
+                  }
+
+                  .modal_3{
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 300px;
+                    background-color: #FFFFFF;
+                    display: none;
+                    width: 1200px;
+                    border-radius: 41px;
+                    padding: 96px 0 0px 0px;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                    z-index: 2;
+
+                    
+
+                    .dli-close {
+                      display: inline-block;
+                      vertical-align: middle;
+                      color: white;
+                      line-height: 1;
+                      width: 2em;
+                      height: 0.1em;
+                      background: currentColor;
+                      border-radius: 0.1em;
+                      position: relative;
+                      transform: rotate(45deg);
+                      position: absolute;
+                      top: -30px;
+                      right: 20px;
+                      cursor: pointer;
+                    }
+                    
+                    .dli-close::before {
+                      content: '';
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background: inherit;
+                      border-radius: inherit;
+                      transform: rotate(90deg);
+                    }
+
+
+                    img{
+                      display: flex;
+                      margin:  0 auto;
+                      width: 640px;
+                      height: auto;
+                      margin-top: 59px;
+                    }
+
+
+                    .btn{
+                      width: 708px;
+                      margin: 0 auto;
+                      height: 82px;
+                      margin-bottom: 44px;
+                
+              
+                      @include tab{
+                        max-width: 700px;
+                        width: 85%;
+                        height: auto;
+                      }
+              
+                      @include sp{
+                        width: 92.5%;
+                        margin: 0 auto;
+                      }
+              
+                      @include sp-second(){
+                      }
+              
+                      p{
+                          display: block;
+                          text-align: center;
+                          font-size: 24px;
+                          line-height: 17px;
+                          color: white;
+                          background-color: #6CCBC8;
+                          border-radius: 41px;  
+                          font-weight: bold; 
+                          letter-spacing: 1.2px;
+                          line-height: 82px;
+                          height: 82px;
+              
+                          @include tab{
+                            font-size: 22px;
+                            height: 75px;
+                            line-height: 75px;
+                          }
+              
+                          @include sp{
+                            font-size: 20px;
+                            height: 67px;
+                            line-height: 67px;
+                          }
+              
+                    
+                       
+                      }/*a*/
+                  }/*btn*/
+
+                  .modal_text{
+                    width: 648px;
+                    margin: 0 auto;
+                    line-height: 2.1;
+                    letter-spacing: 1.6px;
+                  }
+
+               
+
+                }
+                    
 
                   }/*program*/
 
@@ -1037,6 +1371,231 @@ body{
                         }
 
                     }/*item*/
+
+                    .modal_4{
+                      position: fixed;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      max-width: 1200px;
+                      width: 100%;
+                      background-color: #FFFFFF;
+                      display: none;
+                      width: 1200px;
+                      border-radius: 41px;
+                      padding: 96px 0 90px 0px;
+                      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                      z-index: 2;
+                     
+                  
+
+                      .dli-close {
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: white;
+                        line-height: 1;
+                        width: 2em;
+                        height: 0.1em;
+                        background: currentColor;
+                        border-radius: 0.1em;
+                        position: relative;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: -30px;
+                        right: 20px;
+                        cursor: pointer;
+                      }
+                      
+                      .dli-close::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: inherit;
+                        border-radius: inherit;
+                        transform: rotate(90deg);
+                      }
+  
+                      img{
+                        display: flex;
+                        margin:  0 auto;
+                        width: 640px;
+                        height: auto;
+                        margin-top: 59px;
+                      }
+  
+  
+                      .btn{
+                        width: 708px;
+                        margin: 0 auto;
+                        height: 82px;
+                        margin-bottom: 44px;
+                  
+                
+                        @include tab{
+                          max-width: 700px;
+                          width: 85%;
+                          height: auto;
+                        }
+                
+                        @include sp{
+                          width: 92.5%;
+                          margin: 0 auto;
+                        }
+                
+                        @include sp-second(){
+                        }
+                
+                        p{
+                            display: block;
+                            text-align: center;
+                            font-size: 24px;
+                            line-height: 17px;
+                            color: white;
+                            background-color: #6CCBC8;
+                            border-radius: 41px;  
+                            font-weight: bold; 
+                            letter-spacing: 1.2px;
+                            line-height: 82px;
+                            height: 82px;
+                
+                            @include tab{
+                              font-size: 22px;
+                              height: 75px;
+                              line-height: 75px;
+                            }
+                
+                            @include sp{
+                              font-size: 20px;
+                              height: 67px;
+                              line-height: 67px;
+                            }
+                
+                      
+                         
+                        }/*a*/
+                    }/*btn*/
+  
+                    .modal_text{
+                      width: 648px;
+                      margin: 0 auto;
+                      line-height: 2.1;
+                      letter-spacing: 1.6px;
+                    }
+  
+                    .modal_title{
+                      font-size: 26px;
+                      font-weight: bold;
+                      letter-spacing: 0.65px;
+                      color: #6CCBC8;
+                      text-align: center;
+                      margin-bottom: 14px;
+                      margin-top: 35px;
+                    }
+                    .modal_bottom_text{
+                      text-align: center;
+                    }
+  
+                  }
+
+                  .modal_5{
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 300px;
+                    background-color: #FFFFFF;
+                    display: none;
+                    width: 1200px;
+                    border-radius: 41px;
+                    padding: 96px 0 90px 0px;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                    z-index: 2;
+
+
+                    img{
+                      display: flex;
+                      margin:  0 auto;
+                      width: 640px;
+                      height: auto;
+                      margin-top: 59px;
+                    }
+
+
+                    .btn{
+                      width: 708px;
+                      margin: 0 auto;
+                      height: 82px;
+                      margin-bottom: 44px;
+                
+              
+                      @include tab{
+                        max-width: 700px;
+                        width: 85%;
+                        height: auto;
+                      }
+              
+                      @include sp{
+                        width: 92.5%;
+                        margin: 0 auto;
+                      }
+              
+                      @include sp-second(){
+                      }
+              
+                      p{
+                          display: block;
+                          text-align: center;
+                          font-size: 24px;
+                          line-height: 17px;
+                          color: white;
+                          background-color: #6CCBC8;
+                          border-radius: 41px;  
+                          font-weight: bold; 
+                          letter-spacing: 1.2px;
+                          line-height: 82px;
+                          height: 82px;
+              
+                          @include tab{
+                            font-size: 22px;
+                            height: 75px;
+                            line-height: 75px;
+                          }
+              
+                          @include sp{
+                            font-size: 20px;
+                            height: 67px;
+                            line-height: 67px;
+                          }
+              
+                    
+                       
+                      }/*a*/
+                  }/*btn*/
+
+                  .modal_text{
+                    width: 648px;
+                    margin: 0 auto;
+                    line-height: 2.1;
+                    letter-spacing: 1.6px;
+                  }
+
+                  .modal_title{
+                    font-size: 26px;
+                    font-weight: bold;
+                    letter-spacing: 0.65px;
+                    color: #6CCBC8;
+                    text-align: center;
+                    margin-bottom: 14px;
+                    margin-top: 35px;
+                  }
+                  .modal_bottom_text{
+                    text-align: center;
+                  }
+
+                }
 
                     .arrow_right{
                       width: 70px;
@@ -1865,5 +2424,18 @@ body{
       }
     }/*wrap*/
   }/*footer*/
+
+           
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(107, 116, 131, 0.28);
+    z-index: 1;
+    display: none;
+}
+
 }/*body*/
 }
