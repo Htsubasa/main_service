@@ -1347,7 +1347,7 @@ html body .no-scroll .content_box .curriculum .curriculum_text {
   color: #222222;
   line-height: 1.8;
   letter-spacing: 0.4px;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   text-align: center;
 }
 
@@ -1363,6 +1363,8 @@ html body .no-scroll .content_box .curriculum .curriculum_sub_title {
   text-align: center;
   margin-bottom: 28px;
   font-weight: 900;
+  line-height: 1.6;
+  letter-spacing: 0.65px;
 }
 
 @media (max-width: 768px) {
@@ -1379,6 +1381,10 @@ html body .no-scroll .content_box .curriculum .curriculum_sub_title {
 
 html body .no-scroll .content_box .curriculum .flow {
   margin-bottom: 148px;
+  max-width: 784px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 125px;
   /*program*/
 }
 
@@ -1389,7 +1395,7 @@ html body .no-scroll .content_box .curriculum .flow {
 }
 
 html body .no-scroll .content_box .curriculum .flow .arrow_down {
-  margin-left: 190px;
+  margin-left: 170px;
 }
 
 @media (max-width: 560px) {
@@ -1403,9 +1409,9 @@ html body .no-scroll .content_box .curriculum .flow .program {
   display: -ms-flexbox;
   display: flex;
   background-color: #FFF9E8;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 36px 0px;
   border-radius: 33px;
   max-width: 784px;
@@ -1469,12 +1475,11 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 300px;
   background-color: #FFFFFF;
   display: none;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   border-radius: 41px;
-  padding: 96px 0 0px 0px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 2;
@@ -1535,6 +1540,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .dli-close
 html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
   overflow: auto;
   height: 500px;
+  padding: 96px 0 91px 0px;
   /*btn*/
 }
 
@@ -2915,6 +2921,7 @@ html body .no-scroll .content_box .proceed .proceed_wrap .proceed_text_block h3 
   font-size: 20px;
   color: #F79E46;
   margin-top: 42px;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 560px) {
@@ -3033,6 +3040,7 @@ html body .no-scroll .content_box .customer_list .profile_content .profile_block
   font-weight: bold;
   font-size: 17px;
   line-height: 1.88;
+  vertical-align: bottom;
 }
 
 @media (max-width: 768px) {
@@ -3086,6 +3094,7 @@ html body .no-scroll .contact_wrap .contact_title {
   font-size: 26px;
   margin-bottom: 36px;
   text-align: center;
+  font-weight: 500;
   /*tab*/
 }
 

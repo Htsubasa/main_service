@@ -1074,6 +1074,7 @@ html body .content_box .group_table .group_right {
   padding-right: 22px;
   margin-left: 2px;
   height: auto;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 560px) {

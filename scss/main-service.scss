@@ -47,8 +47,6 @@ $sp-second: 425px;  // スマホ
     margin-bottom: 40px;
     font-weight: 900;
 
-  
-
     @include tab{
       width: 100%;
       height: 50px;
@@ -69,7 +67,6 @@ $sp-second: 425px;  // スマホ
 }
 
 html{
-
 body{
   font-family: 'Noto Sans JP', sans-serif;
 
@@ -874,9 +871,12 @@ body{
             .concept-img_sp{
               display: none;
 
-              @include pc{
+              @include sp{
                 margin: 25px 0px;
-                display: initial;
+                display: flex;
+                margin: 0 auto;
+                margin-top: 25px;
+                margin-bottom: 25px;
               }
 
             }
@@ -889,7 +889,7 @@ body{
                   color: #222222;
                   line-height: 1.8;
                   letter-spacing: 0.4px;
-                  margin-bottom: 40px;
+                  margin-bottom: 28px;
                   text-align: center;
 
                   @include pc{
@@ -903,6 +903,8 @@ body{
                 text-align: center;
                 margin-bottom: 28px;
                 font-weight: 900;
+                line-height: 1.6;
+                letter-spacing: 0.65px;
 
                 @include tab{
                   font-size: 24px;
@@ -917,13 +919,17 @@ body{
 
               .flow{
                 margin-bottom: 148px;
+                max-width: 784px;
+                width: 100%;
+                margin: 0 auto;
+                margin-bottom: 125px;
 
                 @include tab{
                   margin-bottom: 100px;
                 }
 
                 .arrow_down{
-                  margin-left: 190px;
+                  margin-left: 170px;
                   @include sp{
                     margin:  0 auto;
                   }
@@ -932,7 +938,7 @@ body{
                   .program{
                       display: flex;
                       background-color: #FFF9E8;
-                      justify-content: center;
+                      justify-content: space-evenly;
                       padding: 36px 0px;
                       border-radius: 33px;
                       max-width: 784px;
@@ -977,20 +983,23 @@ body{
 
                       }/*item*/
 
+
+                      
+
+                 
+
                       .modal_1{
                         position: fixed;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        width: 300px;
                         background-color: #FFFFFF;
                         display: none;
-                        width: 1200px;
+                        max-width: 1200px;
+                        width: 100%;
                         border-radius: 41px;
-                        padding: 96px 0 90px 0px;
                         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                         z-index: 2;
-                        overflow: auto;
                         max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
 
                         @include pc{
@@ -1005,7 +1014,6 @@ body{
                           padding: 40px 0 40px 0px;
                         }
     
-                        
 
                         .dli-close {
                           display: inline-block;
@@ -1022,6 +1030,7 @@ body{
                           top: -30px;
                           right: 20px;
                           cursor: pointer;
+                          z-index: 3;
                         }
                         
                         .dli-close::before {
@@ -1035,7 +1044,28 @@ body{
                           border-radius: inherit;
                           transform: rotate(90deg);
                         }
+                        
+                        .modal_1_wrap{
+                          overflow: auto;
+                          height: 500px;
+                          padding: 96px 0 91px 0px;
 
+
+                      
+                          
+                        @include pc{
+                          width: 730px;
+                        }
+    
+                        @include tab{
+                          width: 80%;
+                          height: 400px;
+                        }
+    
+                        @include sp{
+                          padding: 40px 0 40px 0px;
+                        }
+      
                         
                         img{
                           display: flex;
@@ -1043,6 +1073,10 @@ body{
                           width: 640px;
                           height: auto;
                           margin-top: 59px;
+
+                          @include tab{
+                            width: 70%;
+                          }
                         }
 
 
@@ -1086,9 +1120,10 @@ body{
                               }
                   
                               @include sp{
-                                font-size: 20px;
+                                font-size: 18px;
                                 height: 67px;
                                 line-height: 67px;
+                                margin-bottom: 20px;
                               }
                   
                         
@@ -1104,7 +1139,7 @@ body{
 
 
                       @include tab{
-                        width: 70%;
+                        width: 85%;
                       }
 
                       }
@@ -1117,13 +1152,31 @@ body{
                         text-align: center;
                         margin-bottom: 14px;
                         margin-top: 35px;
+
+                        @include sp{
+                          font-size: 20px;
+                        }
+
                       }
+
                       .modal_bottom_text{
                         text-align: center;
+
+                        @include sp{
+                          width: 85%;
+                          margin: 0 auto;
+                        }
                       }
+                    }
 
                     }
 
+
+                 
+
+              
+
+      
                     .modal_2{
                       position: fixed;
                       top: 50%;
@@ -1134,11 +1187,10 @@ body{
                       display: none;
                       width: 1200px;
                       border-radius: 41px;
-                      padding: 96px 0 90px 0px;
+                      padding: 96px 0 0px 0px;
                       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                       z-index: 2;
-                      max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
-                      overflow: auto;
+                      max-height: calc(100vh -120px); /* 「350px」のところはお好みの値でOK */
 
                       @include pc{
                         width: 730px;
@@ -1149,14 +1201,11 @@ body{
                       }
   
                       @include sp{
-                        padding: 40px 0 40px 0px;
-                      }
-                     
-                     
-
-
+                        padding: 40px 0 0px 0px;
+                      }    
+                      
                       .dli-close {
-                        display: inline-block;
+                        display: inline;
                         vertical-align: middle;
                         color: white;
                         line-height: 1;
@@ -1183,7 +1232,17 @@ body{
                         border-radius: inherit;
                         transform: rotate(90deg);
                       }
-  
+    
+    
+                  .modal_2_wrap{
+                    overflow: auto;
+                    height: 500px;
+
+
+                    @include tab{
+                      width: 400px;
+                    }
+
 
                       img{
                         display: flex;
@@ -1191,6 +1250,18 @@ body{
                         width: 640px;
                         height: auto;
                         margin-top: 59px;
+                        overflow: scroll;
+
+
+                        @include tab{
+                          width: 70%;
+                        }
+
+                        @include sp{
+                          width: 90%;
+                        }
+
+
                       }
 
 
@@ -1239,7 +1310,6 @@ body{
                               line-height: 67px;
                             }
                 
-                      
                          
                         }/*a*/
                     }/*btn*/
@@ -1250,16 +1320,14 @@ body{
                       line-height: 2.1;
                       letter-spacing: 1.6px;
 
-
                       @include tab{
-                        width: 70%;
+                        width: 85%;
                       }
-
-
                     }
 
-                   
-                  }
+                                
+                  }/*wrap*/
+                  }/*modal*/
 
                   .modal_3{
                     position: fixed;
@@ -1275,9 +1343,8 @@ body{
                     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                     z-index: 2;
                     max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
-                    overflow: auto;
 
-                    
+
                     @include pc{
                       width: 730px;
                     }
@@ -1321,6 +1388,17 @@ body{
                       transform: rotate(90deg);
                     }
 
+                    .modal_3_wrap{
+
+                      overflow: auto;
+                      height: 500px;
+
+
+                      @include tab{
+                        width: 400px;
+                      }
+  
+  
 
                     img{
                       display: flex;
@@ -1328,6 +1406,22 @@ body{
                       width: 640px;
                       height: auto;
                       margin-top: 59px;
+
+                      @include pc{
+                        width: 500px;
+                      
+                      } 
+
+                      @include tab{
+                        width: 80%;
+                      }
+
+                      @include sp{
+                        width: 90%;
+                      }
+                     
+
+
                     }
 
 
@@ -1388,15 +1482,14 @@ body{
                     line-height: 2.1;
                     letter-spacing: 1.6px;
 
-                      @include tab{
-                        width: 70%;
-                      }
+                    @include tab{
+                      width: 85%;
+                    }
                   }
-
-
-               
                 }
-                    
+                }
+                   
+             
 
                   }/*program*/
 
@@ -1452,7 +1545,7 @@ body{
                             }
 
                             @include sp{
-                              width:200px;
+                              width: 156px;
                             }
 
                         }
@@ -1533,6 +1626,16 @@ body{
                         width: 640px;
                         height: auto;
                         margin-top: 59px;
+
+                        @include tab{
+                          width: 70%;
+                        }
+
+                        @include sp{
+                          width: 90%;
+                        }
+
+
                       }
   
   
@@ -1592,11 +1695,9 @@ body{
                       margin: 0 auto;
                       line-height: 2.1;
                       letter-spacing: 1.6px;
-
                       @include tab{
-                        width: 70%;
+                        width: 85%;
                       }
-                     
 
                     }
   
@@ -1615,6 +1716,7 @@ body{
   
                   }
 
+
                   .modal_5{
                     position: fixed;
                     top: 50%;
@@ -1625,11 +1727,10 @@ body{
                     display: none;
                     width: 1200px;
                     border-radius: 41px;
-                    padding: 96px 0 90px 0px;
+                    padding: 96px 0 0px 0px;
                     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
                     z-index: 2;
                     max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
-                    overflow: auto;
 
 
                     @include pc{
@@ -1675,12 +1776,38 @@ body{
                       transform: rotate(90deg);
                     }
 
+
+                  .modal_5_wrap{
+                    overflow: auto;
+                    height: 500px;
+
+                    @include tab{
+                      width: 400px;
+                    }
+
+
+
                     img{
                       display: flex;
                       margin:  0 auto;
                       width: 640px;
                       height: auto;
                       margin-top: 59px;
+
+                      @include pc{
+                        width: 500px;
+                      
+                      } 
+
+                      @include tab{
+                        width: 80%;
+                      }
+
+                      @include sp{
+                        width: 90%;
+                      }
+                     
+
                     }
 
 
@@ -1742,7 +1869,7 @@ body{
                     letter-spacing: 1.6px;
 
                     @include tab{
-                      width: 70%;
+                      width: 85%;
                     }
                    
                   }
@@ -1755,12 +1882,31 @@ body{
                     text-align: center;
                     margin-bottom: 14px;
                     margin-top: 35px;
+
+
+
+                        @include sp{
+                          font-size: 20px;
+                        }
+
                   }
                   .modal_bottom_text{
                     text-align: center;
+
+
+                    @include tab{
+                      width: 85%;
+                      margin: 0 auto;
+                    }
+
+
+
                   }
+                }
 
                 }
+
+            
 
                     .arrow_right{
                       width: 70px;
@@ -2150,6 +2296,7 @@ body{
                         font-size: 20px;
                         color: #F79E46;
                         margin-top: 42px;
+                        letter-spacing: 2px;
 
                         @include sp{
                           font-size: 16px;
@@ -2227,6 +2374,7 @@ body{
                 
             .profile{
                 display: flex;
+
                 img{
                   width: 160px;
                   height: 158px;
@@ -2244,12 +2392,14 @@ body{
                 }
 
                 .profile_list{
+
                     li{
                         list-style: none;
                         color: #F79E46;
                         font-weight: bold;
                         font-size: 17px;
                         line-height: 1.88;
+                        vertical-align: bottom;
 
                         @include tab{
                           font-size: 15px;
@@ -2307,6 +2457,7 @@ body{
       font-size: 26px;
       margin-bottom: 36px;
       text-align: center;
+      font-weight: 500;
 
       @include tab{
         font-size: 22px;
@@ -2498,9 +2649,9 @@ body{
     background-color: #515B5D;
 
     .footer_wrap{
-      padding-top: 94px;
-      padding-bottom: 90px;
-      max-width: 992px;
+      padding-top: 106px;
+      padding-bottom: 113px;
+      max-width: 846px;
       display: flex;
       margin: 0 auto;
       justify-content: space-between;
@@ -2549,17 +2700,7 @@ body{
 
           }/*top_title*/
 
-          .nav_title{
-            font-weight: bold;
-            margin-top: 19px;
-            font-size: 18px;
-            letter-spacing: 0.45px;
-            @include pc{
-              font-size: 14px;
-              margin-top: 14px;
-            }
 
-          }/*top_title*/
 
           li{
             list-style: none;  

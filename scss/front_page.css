@@ -845,11 +845,13 @@ html body .mainvisual_wrap .mainvisual_text h1 {
   margin-bottom: 29px;
   font-size: 3.95vw;
   color: #222222;
+  font-weight: 900;
   /*span*/
 }
 
 html body .mainvisual_wrap .mainvisual_text h1 span {
   font-size: 2.5vw;
+  font-weight: 900;
 }
 
 html body .mainvisual_wrap .mainvisual_text h1 .sub_text {
