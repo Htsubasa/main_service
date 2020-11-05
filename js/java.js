@@ -37,20 +37,20 @@ $(function () {
   $('.modal_1').fadeIn();
   $('.overlay').fadeIn();
 });
-$('.close, .overlay').click(function(){
+$('.close, .overlay, .dli-close').click(function(){
   $('.modal_1').fadeOut();
   $('.overlay').fadeOut();
 });
-
 
 $('.modal_img2').click(function(){
   $('.modal_2').fadeIn();
   $('.overlay').fadeIn();
 });
-$('.close, .overlay').click(function(){
+$('.close, .overlay, .dli-close').click(function(){
   $('.modal_2').fadeOut();
   $('.overlay').fadeOut();
 });
+
 
 
 $('.modal_img3').click(function(){
@@ -77,7 +77,7 @@ $('.modal_img5').click(function(){
   $('.modal_5').fadeIn();
   $('.overlay').fadeIn();
 });
-$('.close, .overlay').click(function(){
+$('.close, .overlay, .dli-close').click(function(){
   $('.modal_5').fadeOut();
   $('.overlay').fadeOut();
 });
