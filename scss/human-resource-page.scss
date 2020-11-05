@@ -258,6 +258,14 @@ body{
           }
         }
 
+
+        #contact-drawer{
+          display: none;
+          @include tab{
+            display: block;
+          }
+        }
+
         .g-nav{
           border-right: 1px solid #222222;
           color: #222222;

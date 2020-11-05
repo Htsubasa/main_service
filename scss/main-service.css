@@ -638,6 +638,12 @@ html body .no-scroll header .header_wrap .header_nav ul .g-nav a {
   }
 }
 
+html body .no-scroll header .header_wrap .header_nav ul .g-nav a:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 html body .no-scroll header .header_wrap .header_nav ul li:last-child {
   border-right: none;
 }
