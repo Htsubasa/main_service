@@ -311,12 +311,18 @@ body{
           @include sp{
             font-size: 14px;
           }
-
           }
+
+
+          a:hover{
+            opacity: 0.8;
+            transition: 0.3s;
+          }
+
 
         }/*li*/
 
-        li:last-child{
+        li:nth-child(5){
           border-right: none;
         }/*last-child*/
 

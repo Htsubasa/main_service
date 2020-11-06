@@ -277,7 +277,7 @@ body{
             display: block;
           }
         }
-        
+
         .g-nav{
           border-right: 1px solid #222222;
           color: #222222;
@@ -317,9 +317,16 @@ body{
 
           }
 
+
+          a:hover{
+            opacity: 0.8;
+            transition: 0.3s;
+          }
+
+
         }/*li*/
 
-        li:last-child{
+        li:nth-child(5){
           border-right: none;
         }/*last-child*/
 
@@ -801,17 +808,23 @@ body{
                 #female_pic{
                   margin-right: 20px;
                   margin-left: 38px;
+                  width: 150px;
+                  height: 186px;
+                  margin-top: 60px;
 
                   @include pc{
                     margin-left: 32px;
-                    width: 120px;
-                    height: 360px;
                   }/*pc*/
 
-                  @include tab{
-                    width: 90px;
-                    height: 300px;
+
+                  @include sp{
+                  display: none;
                   }
+
+                }
+
+                #female_pic_sp{
+                  display: none;
 
                   @include sp{
                     margin-left: 20px;
@@ -819,25 +832,34 @@ body{
                     width: 79px;
                     display: flex;
                   }
-
                 }
 
-                #male_pic{
-                  margin-left: 30px;
-                  margin-right: 42px;
-
-                  @include pc{
-                    margin-right: 38px;
-                    width: 120px;
-                    height: 360px;
-                  }/*pc*/
-
+                #male_pic_sp{
+                  display: none;
+               
                   @include sp{
                     margin-right: 10px;
                     margin-left: 0px;
                     height: 280px;
                     width: 79px;
                     display: flex;
+                  }
+                }
+
+                #male_pic{
+                  margin-left: 30px;
+                  margin-right: 42px;
+                  width: 150px;
+                  height: 186px;
+                  margin-top: 60px;
+
+
+                  @include pc{
+                    margin-right: 38px;
+                  }/*pc*/
+
+                  @include sp{
+                  display: none;
                   }
 
                 }
@@ -1110,7 +1132,7 @@ body{
                 margin-right: 30px;
                 margin-left: 20px;
                 width: 277px;
-                height: 164px;
+                height: 196px;
 
                 @include tab{
                   margin-left: auto;
@@ -1120,7 +1142,7 @@ body{
 
                 @include sp-second(){
                   width: 200px;
-                  height: 120px;
+                  height: 160px;
                 }
 
 

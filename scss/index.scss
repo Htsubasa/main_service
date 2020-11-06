@@ -30,10 +30,9 @@ $sp-second: 425px;  // スマホ
       @content;
     }
   }
-
   @mixin h2_title {
     border-radius: 12px;
-    background-image: url(../img/h2.png);
+    background-image: url(../img/common/title_blue.png);
     background-position: center;
     background-size: 100%;
     color: #FFFFFF;
@@ -41,9 +40,13 @@ $sp-second: 425px;  // スマホ
     padding-left: 34px;
     height: 76px;
     line-height: 76px;
+    max-width: 880px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 34px;
+    background-size: cover;
+    margin-top: 50px;
+
 
     @include tab{
       width: 100%;
@@ -61,9 +64,7 @@ $sp-second: 425px;  // スマホ
       height: 107px;
       line-height: 107px;
     }
-
-
-  }
+}
 
 html{
 
@@ -257,6 +258,7 @@ body{
           }
         }
 
+
         #contact-drawer{
           display: none;
           @include tab{
@@ -300,7 +302,6 @@ body{
           @include sp{
             font-size: 14px;
           }
-
           }
 
 
@@ -313,9 +314,9 @@ body{
         }/*li*/
 
         li:nth-child(5){
-          border-right: none;
-        }/*last-child*/
-
+            border-right: none;
+          }/*last-child*/
+  
 
       }/*ul*/
     }/*nav*/
@@ -445,7 +446,7 @@ body{
 
 
   .mainvisual{
-    background-image: url(../img/price/mv.png);
+    background-image: url(../img/common/mv.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 45vw;
@@ -455,7 +456,7 @@ body{
     @include sp(){
       background-size: 100% 100%;
       height: 395px;
-      background-image: url(../img/price/mv_sp.png);
+      background-image: url(../img/common/mainvisual-2_sp.png);
     }
 
 
@@ -537,345 +538,90 @@ body{
     margin-top: 85px;
     margin-right: 40px;
     margin-left: 40px;
+    margin-bottom: 151px;
 
     @include tab{
       margin-right: 25px;
       margin-left: 25px;  
+      margin-bottom: 120px;
     }
 
     @include sp{
       margin-top: 35px; 
       margin-right: 15px;
       margin-left: 15px;  
+      margin-bottom: 100px;
     }
 
     &_box{
         max-width: 1200px;
         width: 100%;
         margin:  0 auto;
-        padding: 94px 160px 134px 160px;
+        padding: 20px 160px 134px 160px;
         box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.16);
         border-radius: 41px;
 
         @include pc{
-          padding: 94px 50px 134px 50px;
+          padding: 20px 50px 134px 50px;
         }/*pc*/
 
         @include tab{
-          padding: 67px 30px 70px 30px;
+          padding: 15px 30px 70px 30px;
         }/*pc*/
 
         @include sp-second(){
-          padding: 67px 18px 70px 18px;
+          padding: 10px 18px 10px 18px;
         }/*pc*/
 
-            h2{
-                @include h2_title;
-            }/*h2*/
-            
 
-            .reservation_box{
-                margin-bottom: 25px;
-                padding: 20px 30px;
-                background-color: rgb(248, 248, 248);
+          h2{
+              @include h2_title;
+          }/*h2*/
 
-                @include tab{
-                  padding: 40px 30px;
-                }
-
-                @include sp{
-                  padding: 15px 15px 30px 15px;
-                }
-
-
-                .link_block{
-                    display: flex;
-                    margin-bottom: 20px;
-
-                    @include tab{
-                      display: block;
-                    }/*tab*/
-
-                img{
-                  width: 200px;
-
-                  @include tab{
-                    width: 100%;
-                    margin-bottom: 30px;
-                  }
-
-                  @include sp{
-                    margin-bottom: 15px;
-                  }
-
-                }
-
-                .box_text_area{
-                  margin-left: 30px;
-
-
-                  @include tab{
-                    margin-left: 0px;
-                    margin-bottom: 20px;
-                  }/*tab*/
-
-                  h3{
-                    font-size: 25px;
-                    margin-bottom: 10px;
-
-                    @include pc{
-                      font-size: 20px;
-                    }
-
-                    @include sp{
-                      font-size: 18px;
-                    }
-  
-
-                    @include tab{
-                      margin-bottom: 10px;
-                    }/*tab*/
-
-                  }
-
-                  .time{
-                    font-size: 20px;
-                  }
-
-
-
-                }
-
-                .btn{
-                  margin-left: 30px;
-                  width: 104px;
-
-                  @include tab{
-                    margin-left: 0px;
-                    width: 100%;
-                  }/*tab*/
-
-                    p{
-                    background-color: #4abaa7;
-                    color: #FFF;
-                    text-align: center;
-                    padding: 12px 0px;
-                    border-radius: 2px;
-                }
-
-                }/*btn*/
-
-                         
-            }/*link_block*/
-
-            }/*reservation_box*/
-
-            .reservation_box:hover{
-              opacity: .7;
+          p{
+            letter-spacing: 0.4px;
+            line-height: 1.875;
+            @include tab{
+              font-size: 16px;
             }
+          }/*text*/
+
+          ul{
+              background-color: #FFF7E0;
+              padding: 40px 0 40px 48px;
+              border-radius: 12px;
+
+              @include tab{
+                padding: 30px 0 20px 30px;
+            }
+
+              li{
+                  list-style: none;
+                  font-size: 22px;
+                  font-weight: bold;
+                  line-height: 1.5;
+                  @include tab{
+                    font-size: 18px;
+                }
+              }/*li*/
+          }/*ul*/
+
+          h3{
+              font-size: 22px;
+              font-weight: bold;
+              margin: 15px 0px;
+
+              @include tab{
+                font-size: 20px;
+            }
+
+          }
+
+
+
       }/*box*/
   }/*content*/
 
-
-
-  .contact_wrap{
-    margin-bottom: 94px;
-    margin-top: 109px;
-
-    @include sp{
-      margin-bottom: 70px;
-      margin-top: 90px;
-      text-align: center;
-    }
-
-    .contact_title{
-      font-size: 26px;
-      margin-bottom: 36px;
-      text-align: center;
-
-      @include tab{
-        font-size: 22px;
-      }/*tab*/
-
-      @include sp{
-        display: none;
-      }
-
-
-    }
-
-    .contact_title_sp{
-      display: none;
-
-      @include sp{
-        display: block;
-        font-size: 20px;
-        margin-bottom: 16px;
-        width: 100%;
-        line-height: 1.6;
-        font-weight: 500;
-      }
-
-    }
-
-
-    .btn{
-        width: 708px;
-        margin: 0 auto;
-        height: 82px;
-  
-
-        @include tab{
-          max-width: 700px;
-          width: 85%;
-          height: auto;
-        }
-
-        @include sp{
-          width: 92.5%;
-          margin: 0 auto;
-        }
-
-        @include sp-second(){
-        }
-
-        a{
-            display: block;
-            text-align: center;
-            font-size: 24px;
-            line-height: 17px;
-            color: #222222;
-            background-color: #FBD362;
-            border-radius: 41px;  
-            font-weight: bold; 
-            letter-spacing: 1.2px;
-            line-height: 82px;
-            height: 82px;
-
-            @include tab{
-              font-size: 22px;
-              height: 75px;
-              line-height: 75px;
-            }
-
-            @include sp{
-              font-size: 20px;
-              height: 67px;
-              line-height: 67px;
-            }
-
-      
-         
-        }/*a*/
-    }/*btn*/
-
-    .btn:hover{
-      opacity: 0.8;
-      transition: .3s;
-    }
-
-    .reservation{
-        text-align: center;
-        margin-top: 42px;
-        font-weight: bold;
-        font-size: 18px;
-        letter-spacing: 0.45px;
-
-        @include sp{
-          font-size: 16px;
-          margin-top: 18px;
-          margin-bottom: 21px;
-        }
-    }
-
-    .contact_tel{
-        padding-left: 25.6px;
-        margin-right: 23px;
-        display: flex;
-        justify-content: center;
-        margin-top: 13px;
-
-        @include sp{
-          display: block;
-          margin-right: 0px;
-          text-align: center;
-          padding-left: 0px;
-        }
-
-        p{
-            color: #F79E46;
-            letter-spacing: 2.6px;
-            font-weight: bold;
-            font-size: 26px;
-
-            @include tab{
-              font-size: 26px;
-            }
-
-          .number{
-            margin-left: 12px;
-            font-family: 'Oswald', sans-serif;
-            font-weight: 500;
-            letter-spacing: 1.4px;
-            align-items: center;
-            font-size: 28px;
-
-
-            @include tab{
-              font-size: 22px;
-            }
-            @include sp{
-              font-size: 28px;
-            }
-
-            img{
-              width: 18px;
-              margin-left: 17.4px;
-              margin-right: 4px;
-
-              @include tab{
-                margin-left: 8px;
-                margin-right: 4px;
-                width: 14px;
-                }
-
-
-            }/*img*/
-
-          }/*span*/
-        }/*p*/
-      }/*cotact_tel*/
-
-      #shinjuku{
-          margin-right: 18px;
-
-
-          @include tab{
-            margin-right: 12px;
-          }
-
-          @include sp{
-            margin-right: 0px;
-          }
-      }/*shinjuku*/
-
-      #yokohama{
-        margin-left: 18px;
-
-        @include tab{
-          margin-right: 12px;
-        }
-
-        @include sp{
-          margin: 0 auto;
-        }
-
-
-    }/*yokohama*/
-
-
-
-}/*contact_wrap*/
 
 
   

@@ -310,9 +310,14 @@ body{
 
           }
 
-        }/*li*/
+          a:hover{
+            opacity: 0.8;
+            transition: 0.3s;
+          }
 
-        li:last-child{
+
+        }/*li*/
+        li:nth-child(5){
           border-right: none;
         }/*last-child*/
 
@@ -447,7 +452,7 @@ body{
 
 
   .mainvisual{
-    background-image: url(../img/service/mv-mainvisual.png);
+    background-image: url(../img/common/mainvisual_company.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 45vw;
@@ -708,6 +713,8 @@ body{
             .post_block:first-of-type{
                 border-top: 1px solid #DBDBDB;
             }
+
+
 
 
             .category_title{

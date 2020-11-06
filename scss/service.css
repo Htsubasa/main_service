@@ -635,7 +635,13 @@ html body header .header_wrap .header_nav ul .g-nav a {
   }
 }
 
-html body header .header_wrap .header_nav ul li:last-child {
+html body header .header_wrap .header_nav ul .g-nav a:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body header .header_wrap .header_nav ul li:nth-child(5) {
   border-right: none;
 }
 
@@ -1236,27 +1242,47 @@ html body .content_box .example_block .example_box {
 html body .content_box .example_block .example_box #female_pic {
   margin-right: 20px;
   margin-left: 38px;
+  width: 150px;
+  height: 186px;
+  margin-top: 60px;
   /*pc*/
 }
 
 @media (max-width: 1024px) {
   html body .content_box .example_block .example_box #female_pic {
     margin-left: 32px;
-    width: 120px;
-    height: 360px;
-  }
-}
-
-@media (max-width: 768px) {
-  html body .content_box .example_block .example_box #female_pic {
-    width: 90px;
-    height: 300px;
   }
 }
 
 @media (max-width: 560px) {
   html body .content_box .example_block .example_box #female_pic {
+    display: none;
+  }
+}
+
+html body .content_box .example_block .example_box #female_pic_sp {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  html body .content_box .example_block .example_box #female_pic_sp {
     margin-left: 20px;
+    height: 280px;
+    width: 79px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+html body .content_box .example_block .example_box #male_pic_sp {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  html body .content_box .example_block .example_box #male_pic_sp {
+    margin-right: 10px;
+    margin-left: 0px;
     height: 280px;
     width: 79px;
     display: -webkit-box;
@@ -1268,26 +1294,21 @@ html body .content_box .example_block .example_box #female_pic {
 html body .content_box .example_block .example_box #male_pic {
   margin-left: 30px;
   margin-right: 42px;
+  width: 150px;
+  height: 186px;
+  margin-top: 60px;
   /*pc*/
 }
 
 @media (max-width: 1024px) {
   html body .content_box .example_block .example_box #male_pic {
     margin-right: 38px;
-    width: 120px;
-    height: 360px;
   }
 }
 
 @media (max-width: 560px) {
   html body .content_box .example_block .example_box #male_pic {
-    margin-right: 10px;
-    margin-left: 0px;
-    height: 280px;
-    width: 79px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
   }
 }
 
@@ -1598,7 +1619,7 @@ html body .content_box .bubble_part img {
   margin-right: 30px;
   margin-left: 20px;
   width: 277px;
-  height: 164px;
+  height: 196px;
 }
 
 @media (max-width: 768px) {
@@ -1614,7 +1635,7 @@ html body .content_box .bubble_part img {
 @media (max-width: 425px) {
   html body .content_box .bubble_part img {
     width: 200px;
-    height: 120px;
+    height: 160px;
   }
 }
 
