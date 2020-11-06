@@ -644,7 +644,7 @@ html body .no-scroll header .header_wrap .header_nav ul .g-nav a:hover {
   transition: 0.3s;
 }
 
-html body .no-scroll header .header_wrap .header_nav ul li:last-child {
+html body .no-scroll header .header_wrap .header_nav ul li:nth-child(5) {
   border-right: none;
 }
 
