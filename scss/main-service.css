@@ -1552,6 +1552,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
+    width: 95%;
     padding: 40px 0 40px 0px;
   }
 }
@@ -1605,11 +1606,13 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_w
   html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
     width: 80%;
     height: 400px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+    width: 95%;
     padding: 40px 0 40px 0px;
   }
 }
@@ -1652,7 +1655,13 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_w
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
-    width: 90%;
+    width: 300px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
+    width: 280px;
   }
 }
 
@@ -1684,6 +1693,12 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_w
     height: 67px;
     line-height: 67px;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn p {
+    font-size: 14px;
   }
 }
 
@@ -1761,7 +1776,8 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 {
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_2 {
-    padding: 40px 0 0px 0px;
+    width: 95%;
+    padding: 40px 0 40px 0px;
   }
 }
 
@@ -1802,9 +1818,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_w
   /*btn*/
 }
 
+@media (max-width: 1024px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap {
+    width: 730px;
+  }
+}
+
 @media (max-width: 768px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap {
-    width: 400px;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap {
+    width: 95%;
+    padding: 40px 0 40px 0px;
   }
 }
 
@@ -1822,6 +1853,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_w
 @media (max-width: 768px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap img {
     width: 70%;
+    margin: 0 auto;
   }
 }
 
@@ -1853,7 +1885,13 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_w
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
-    width: 90%;
+    width: 300px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
+    width: 280px;
   }
 }
 
@@ -1881,9 +1919,16 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_w
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn p {
-    font-size: 20px;
+    font-size: 18px;
     height: 67px;
     line-height: 67px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn p {
+    font-size: 14px;
   }
 }
 
@@ -1933,6 +1978,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 {
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_3 {
+    width: 95%;
     padding: 40px 0 40px 0px;
   }
 }
@@ -1974,9 +2020,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_w
   /*btn*/
 }
 
+@media (max-width: 1024px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap {
+    width: 730px;
+  }
+}
+
 @media (max-width: 768px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap {
-    width: 400px;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap {
+    width: 95%;
+    padding: 40px 0 40px 0px;
   }
 }
 
@@ -2030,7 +2091,13 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_w
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
-    width: 90%;
+    width: 300px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
+    width: 280px;
   }
 }
 
@@ -2058,9 +2125,16 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_w
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn p {
-    font-size: 20px;
+    font-size: 18px;
     height: 67px;
     line-height: 67px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn p {
+    font-size: 14px;
   }
 }
 
@@ -2203,6 +2277,7 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_4 {
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program_second .modal_4 {
+    width: 95%;
     padding: 40px 0 40px 0px;
   }
 }
@@ -2282,7 +2357,13 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_4 .bt
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program_second .modal_4 .btn {
-    width: 90%;
+    width: 300px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_4 .btn {
+    width: 280px;
   }
 }
 
@@ -2313,6 +2394,13 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_4 .bt
     font-size: 18px;
     height: 67px;
     line-height: 67px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_4 .btn p {
+    font-size: 14px;
   }
 }
 
@@ -2376,6 +2464,7 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 {
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 {
+    width: 95%;
     padding: 40px 0 40px 0px;
   }
 }
@@ -2417,9 +2506,24 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .mo
   /*btn*/
 }
 
+@media (max-width: 1024px) {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap {
+    width: 730px;
+  }
+}
+
 @media (max-width: 768px) {
   html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap {
-    width: 400px;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap {
+    width: 95%;
+    padding: 40px 0 40px 0px;
   }
 }
 
@@ -2473,7 +2577,13 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .mo
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
-    width: 90%;
+    width: 300px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
+    width: 280px;
   }
 }
 
@@ -2501,9 +2611,16 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .mo
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn p {
-    font-size: 20px;
+    font-size: 18px;
     height: 67px;
     line-height: 67px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn p {
+    font-size: 14px;
   }
 }
 

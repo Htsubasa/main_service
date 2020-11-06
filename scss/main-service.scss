@@ -1053,6 +1053,7 @@ body{
                         }
     
                         @include sp{
+                          width: 95%;
                           padding: 40px 0 40px 0px;
                         }
     
@@ -1090,10 +1091,7 @@ body{
                         .modal_1_wrap{
                           overflow: auto;
                           height: 500px;
-                          padding: 96px 0 91px 0px;
-
-
-                      
+                          padding: 96px 0 91px 0px;                      
                           
                         @include pc{
                           width: 730px;
@@ -1102,9 +1100,11 @@ body{
                         @include tab{
                           width: 80%;
                           height: 400px;
+                          margin: 0 auto;
                         }
     
                         @include sp{
+                          width: 95%;
                           padding: 40px 0 40px 0px;
                         }
       
@@ -1139,7 +1139,11 @@ body{
                           }
     
                           @include sp{
-                            width: 90%;
+                            width: 300px;
+                          }
+
+                          @include sp-second(){
+                            width: 280px;
                           }
                          
                           p{
@@ -1166,6 +1170,10 @@ body{
                                 height: 67px;
                                 line-height: 67px;
                                 margin-bottom: 20px;
+                              }
+                  
+                              @include sp-second(){
+                                font-size: 14px;
                               }
                   
                         
@@ -1243,9 +1251,9 @@ body{
                       }
   
                       @include sp{
-                        padding: 40px 0 0px 0px;
-                      }    
-                      
+                        width: 95%;
+                        padding: 40px 0 40px 0px;
+                      }
                       .dli-close {
                         display: inline;
                         vertical-align: middle;
@@ -1280,10 +1288,21 @@ body{
                     overflow: auto;
                     height: 500px;
 
+                    @include pc{
+                      width: 730px;
+                    }
 
                     @include tab{
-                      width: 400px;
+                      width: 80%;
+                      height: 400px;
+                      margin: 0 auto;
                     }
+
+                    @include sp{
+                      width: 95%;
+                      padding: 40px 0 40px 0px;
+                    }
+  
 
 
                       img{
@@ -1297,6 +1316,7 @@ body{
 
                         @include tab{
                           width: 70%;
+                          margin: 0 auto;
                         }
 
                         @include sp{
@@ -1313,6 +1333,7 @@ body{
                         height: 82px;
                         margin-bottom: 44px;
                   
+                
                         @include pc{
                           width: 500px;
                         
@@ -1323,10 +1344,13 @@ body{
                         }
   
                         @include sp{
-                          width: 90%;
+                          width: 300px;
+                        }
+
+                        @include sp-second(){
+                          width: 280px;
                         }
                        
-                
                         p{
                             display: block;
                             text-align: center;
@@ -1347,11 +1371,17 @@ body{
                             }
                 
                             @include sp{
-                              font-size: 20px;
+                              font-size: 18px;
                               height: 67px;
                               line-height: 67px;
+                              margin-bottom: 20px;
                             }
                 
+                            @include sp-second(){
+                              font-size: 14px;
+                            }
+                
+                      
                          
                         }/*a*/
                     }/*btn*/
@@ -1386,7 +1416,6 @@ body{
                     z-index: 2;
                     max-height: calc(100vh - 120px); /* 「350px」のところはお好みの値でOK */
 
-
                     @include pc{
                       width: 730px;
                     }
@@ -1396,6 +1425,7 @@ body{
                     }
 
                     @include sp{
+                      width: 95%;
                       padding: 40px 0 40px 0px;
                     }
 
@@ -1435,10 +1465,21 @@ body{
                       overflow: auto;
                       height: 500px;
 
-
-                      @include tab{
-                        width: 400px;
+                      @include pc{
+                        width: 730px;
                       }
+  
+                      @include tab{
+                        width: 80%;
+                        height: 400px;
+                        margin: 0 auto;
+                      }
+  
+                      @include sp{
+                        width: 95%;
+                        padding: 40px 0 40px 0px;
+                      }
+    
   
   
 
@@ -1466,14 +1507,13 @@ body{
 
                     }
 
-
                     .btn{
                       width: 708px;
                       margin: 0 auto;
                       height: 82px;
                       margin-bottom: 44px;
                 
-                                 
+              
                       @include pc{
                         width: 500px;
                       
@@ -1484,10 +1524,13 @@ body{
                       }
 
                       @include sp{
-                        width: 90%;
+                        width: 300px;
+                      }
+
+                      @include sp-second(){
+                        width: 280px;
                       }
                      
-              
                       p{
                           display: block;
                           text-align: center;
@@ -1508,9 +1551,14 @@ body{
                           }
               
                           @include sp{
-                            font-size: 20px;
+                            font-size: 18px;
                             height: 67px;
                             line-height: 67px;
+                            margin-bottom: 20px;
+                          }
+              
+                          @include sp-second(){
+                            font-size: 14px;
                           }
               
                     
@@ -1626,16 +1674,15 @@ body{
                       @include pc{
                         width: 730px;
                       }
-
+  
                       @include tab{
                         width: 80%;
                       }
-
+  
                       @include sp{
+                        width: 95%;
                         padding: 40px 0 40px 0px;
                       }
-                     
-                     
                      
                   
 
@@ -1686,57 +1733,61 @@ body{
 
                       }
   
-  
-                      .btn{
-                        width: 708px;
-                        margin: 0 auto;
-                        height: 82px;
-                        margin-bottom: 44px;
-                                    
-                      @include pc{
-                        width: 500px;
-                      
-                      }
+   .btn{
+                          width: 708px;
+                          margin: 0 auto;
+                          height: 82px;
+                          margin-bottom: 44px;
+                    
+                  
+                          @include pc{
+                            width: 500px;
+                          
+                          }
+    
+                          @include tab{
+                            width: 80%;
+                          }
+    
+                          @include sp{
+                            width: 300px;
+                          }
 
-                      @include tab{
-                        width: 80%;
-                      }
-
-                      @include sp{
-                        width: 90%;
-                      }
-                     
-                     
-                
-                        p{
-                            display: block;
-                            text-align: center;
-                            font-size: 24px;
-                            line-height: 17px;
-                            color: white;
-                            background-color: #6CCBC8;
-                            border-radius: 41px;  
-                            font-weight: bold; 
-                            letter-spacing: 1.2px;
-                            line-height: 82px;
-                            height: 82px;
-                
-                            @include tab{
-                              font-size: 22px;
-                              height: 75px;
-                              line-height: 75px;
-                            }
-                
-                            @include sp{
-                              font-size: 18px;
-                              height: 67px;
-                              line-height: 67px;
-                            }
-                
-                      
+                          @include sp-second(){
+                            width: 280px;
+                          }
                          
-                        }/*a*/
-                    }/*btn*/
+                          p{
+                              display: block;
+                              text-align: center;
+                              font-size: 24px;
+                              line-height: 17px;
+                              color: white;
+                              background-color: #6CCBC8;
+                              border-radius: 41px;  
+                              font-weight: bold; 
+                              letter-spacing: 1.2px;
+                              line-height: 82px;
+                              height: 82px;
+                  
+                              @include tab{
+                                font-size: 22px;
+                                height: 75px;
+                                line-height: 75px;
+                              }
+                  
+                              @include sp{
+                                font-size: 18px;
+                                height: 67px;
+                                line-height: 67px;
+                                margin-bottom: 20px;
+                              }
+                  
+                              @include sp-second(){
+                                font-size: 14px;
+                              }                         
+                          }/*a*/
+                      }/*btn*/
   
                     .modal_text{
                       width: 648px;
@@ -1790,10 +1841,9 @@ body{
                     }
 
                     @include sp{
+                      width: 95%;
                       padding: 40px 0 40px 0px;
                     }
-                   
-                   
 
                     .dli-close {
                       display: inline-block;
@@ -1829,9 +1879,21 @@ body{
                     overflow: auto;
                     height: 500px;
 
-                    @include tab{
-                      width: 400px;
+                    @include pc{
+                      width: 730px;
                     }
+
+                    @include tab{
+                      width: 80%;
+                      height: 400px;
+                      margin: 0 auto;
+                    }
+
+                    @include sp{
+                      width: 95%;
+                      padding: 40px 0 40px 0px;
+                    }
+  
 
 
 
@@ -1858,7 +1920,6 @@ body{
 
                     }
 
-
                     .btn{
                       width: 708px;
                       margin: 0 auto;
@@ -1876,10 +1937,13 @@ body{
                       }
 
                       @include sp{
-                        width: 90%;
+                        width: 300px;
+                      }
+
+                      @include sp-second(){
+                        width: 280px;
                       }
                      
-              
                       p{
                           display: block;
                           text-align: center;
@@ -1900,16 +1964,19 @@ body{
                           }
               
                           @include sp{
-                            font-size: 20px;
+                            font-size: 18px;
                             height: 67px;
                             line-height: 67px;
+                            margin-bottom: 20px;
                           }
               
-                    
-                       
+                          @include sp-second(){
+                            font-size: 14px;
+                          }                 
                       }/*a*/
                   }/*btn*/
 
+                  
                   .modal_text{
                     width: 648px;
                     margin: 0 auto;
