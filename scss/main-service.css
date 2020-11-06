@@ -1514,6 +1514,12 @@ html body .no-scroll .content_box .curriculum .flow .program .program_item .prog
   line-height: 1.6;
 }
 
+html body .no-scroll .content_box .curriculum .flow .program .program_item:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
   position: fixed;
   top: 50%;
