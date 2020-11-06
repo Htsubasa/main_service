@@ -2105,6 +2105,12 @@ html body .no-scroll .content_box .curriculum .flow .program_second {
   }
 }
 
+html body .no-scroll .content_box .curriculum .flow .program_second .program_item:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 html body .no-scroll .content_box .curriculum .flow .program_second .program_item {
   background-color: #FFF9E8;
   text-align: center;
